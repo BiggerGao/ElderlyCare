@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F71C7E91C8C641A00F05A31 /* ZJZHourInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */; };
+		5F71C7EC1C8C64A700F05A31 /* ZJZDailyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */; };
 		5FB5765A1C8409FA00847B28 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB576591C8409FA00847B28 /* CFNetwork.framework */; };
 		5FB5765C1C840A1400847B28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB5765B1C840A1400847B28 /* SystemConfiguration.framework */; };
 		5FB5765E1C840A1800847B28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB5765D1C840A1800847B28 /* Security.framework */; };
@@ -85,20 +87,19 @@
 		5FF801041C897BC500495598 /* ZFPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF800F51C897BC500495598 /* ZFPieChart.m */; };
 		5FF801051C897BC500495598 /* ZFTranslucencePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF800F71C897BC500495598 /* ZFTranslucencePath.m */; };
 		5FF801081C897CD300495598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF801071C897CD300495598 /* AppDelegate.m */; };
-		5FF8010C1C897D2000495598 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8010B1C897D2000495598 /* CenterViewController.m */; };
-		5FF8FF6B1C89784900495598 /* MinStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF6A1C89784900495598 /* MinStatus.m */; };
-		5FF8FF6E1C89786800495598 /* MinStatusDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF6D1C89786800495598 /* MinStatusDAO.m */; };
-		5FF8FF7A1C8978AD00495598 /* MinStatusTBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF711C8978AD00495598 /* MinStatusTBXMLParser.m */; };
+		5FF8010C1C897D2000495598 /* ZJZCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */; };
+		5FF8FF6E1C89786800495598 /* ZJZInfoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF6D1C89786800495598 /* ZJZInfoDAO.m */; };
+		5FF8FF7A1C8978AD00495598 /* ZJZUserInfoXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF711C8978AD00495598 /* ZJZUserInfoXMLParser.m */; };
 		5FF8FF7B1C8978AD00495598 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF731C8978AD00495598 /* TBXML+Compression.m */; };
 		5FF8FF7C1C8978AD00495598 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF741C8978AD00495598 /* TBXML+HTTP.m */; };
 		5FF8FF7D1C8978AD00495598 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF751C8978AD00495598 /* TBXML.m */; };
-		5FF8FF801C8978BD00495598 /* MinStatusBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF7F1C8978BD00495598 /* MinStatusBL.m */; };
+		5FF8FF801C8978BD00495598 /* ZJZUserInfoBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF7F1C8978BD00495598 /* ZJZUserInfoBL.m */; };
 		5FF8FF931C8978D100495598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FF8FF8C1C8978D100495598 /* Main.storyboard */; };
-		5FF8FFA01C89795500495598 /* ChartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF9B1C89795500495598 /* ChartTableViewController.m */; };
-		5FF8FFA11C89795500495598 /* MasterCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF9D1C89795500495598 /* MasterCalendarVC.m */; };
+		5FF8FFA01C89795500495598 /* ZJZChartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF9B1C89795500495598 /* ZJZChartTableViewController.m */; };
+		5FF8FFA11C89795500495598 /* ZJZMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF9D1C89795500495598 /* ZJZMasterViewController.m */; };
 		5FF8FFA21C89795500495598 /* ZFChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF9F1C89795500495598 /* ZFChartViewController.m */; };
-		5FF8FFA51C89796900495598 /* ExpertSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FFA41C89796900495598 /* ExpertSystemViewController.m */; };
-		5FF8FFAB1C89798700495598 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FFAA1C89798700495598 /* MoreViewController.m */; };
+		5FF8FFA51C89796900495598 /* ZJZExpertSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FFA41C89796900495598 /* ZJZExpertSystemViewController.m */; };
+		5FF8FFAB1C89798700495598 /* ZJZMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FFAA1C89798700495598 /* ZJZMoreViewController.m */; };
 		7DD102B7195812850017EB4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD102B6195812850017EB4C /* Foundation.framework */; };
 		7DD102B9195812860017EB4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD102B8195812860017EB4C /* CoreGraphics.framework */; };
 		7DD102BB195812860017EB4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD102BA195812860017EB4C /* UIKit.framework */; };
@@ -106,6 +107,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F71C7E71C8C641A00F05A31 /* ZJZHourInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZHourInfo.h; path = ElderlyCare/PersistanceLayer/ZJZHourInfo.h; sourceTree = "<group>"; };
+		5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZHourInfo.m; path = ElderlyCare/PersistanceLayer/ZJZHourInfo.m; sourceTree = "<group>"; };
+		5F71C7EA1C8C64A600F05A31 /* ZJZDailyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZDailyInfo.h; path = ElderlyCare/PersistanceLayer/ZJZDailyInfo.h; sourceTree = "<group>"; };
+		5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZDailyInfo.m; path = ElderlyCare/PersistanceLayer/ZJZDailyInfo.m; sourceTree = "<group>"; };
 		5FB576591C8409FA00847B28 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5FB5765B1C840A1400847B28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5FB5765D1C840A1800847B28 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -228,33 +233,31 @@
 		5FF800F71C897BC500495598 /* ZFTranslucencePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTranslucencePath.m; sourceTree = "<group>"; };
 		5FF801061C897CD300495598 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Calendar/AppDelegate.h; sourceTree = "<group>"; };
 		5FF801071C897CD300495598 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Calendar/AppDelegate.m; sourceTree = "<group>"; };
-		5FF8010A1C897D2000495598 /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CenterViewController.h; path = ElderlyCare/CenterViewController.h; sourceTree = "<group>"; };
-		5FF8010B1C897D2000495598 /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CenterViewController.m; path = ElderlyCare/CenterViewController.m; sourceTree = "<group>"; };
-		5FF8FF691C89784900495598 /* MinStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinStatus.h; path = ElderlyCare/PersistanceLayer/MinStatus.h; sourceTree = "<group>"; };
-		5FF8FF6A1C89784900495598 /* MinStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinStatus.m; path = ElderlyCare/PersistanceLayer/MinStatus.m; sourceTree = "<group>"; };
-		5FF8FF6C1C89786800495598 /* MinStatusDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinStatusDAO.h; path = ElderlyCare/PersistanceLayer/MinStatusDAO.h; sourceTree = "<group>"; };
-		5FF8FF6D1C89786800495598 /* MinStatusDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinStatusDAO.m; path = ElderlyCare/PersistanceLayer/MinStatusDAO.m; sourceTree = "<group>"; };
-		5FF8FF701C8978AD00495598 /* MinStatusTBXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinStatusTBXMLParser.h; sourceTree = "<group>"; };
-		5FF8FF711C8978AD00495598 /* MinStatusTBXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinStatusTBXMLParser.m; sourceTree = "<group>"; };
+		5FF8010A1C897D2000495598 /* ZJZCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZCenterViewController.h; path = ElderlyCare/ZJZCenterViewController.h; sourceTree = "<group>"; };
+		5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZCenterViewController.m; path = ElderlyCare/ZJZCenterViewController.m; sourceTree = "<group>"; };
+		5FF8FF6C1C89786800495598 /* ZJZInfoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZInfoDAO.h; path = ElderlyCare/PersistanceLayer/ZJZInfoDAO.h; sourceTree = "<group>"; };
+		5FF8FF6D1C89786800495598 /* ZJZInfoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZInfoDAO.m; path = ElderlyCare/PersistanceLayer/ZJZInfoDAO.m; sourceTree = "<group>"; };
+		5FF8FF701C8978AD00495598 /* ZJZUserInfoXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZUserInfoXMLParser.h; path = ElderlyCare/BusinessLogicLayer/TBXML/ZJZUserInfoXMLParser.h; sourceTree = "<group>"; };
+		5FF8FF711C8978AD00495598 /* ZJZUserInfoXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZUserInfoXMLParser.m; path = ElderlyCare/BusinessLogicLayer/TBXML/ZJZUserInfoXMLParser.m; sourceTree = "<group>"; };
 		5FF8FF731C8978AD00495598 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
 		5FF8FF741C8978AD00495598 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
 		5FF8FF751C8978AD00495598 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		5FF8FF771C8978AD00495598 /* TBXML+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+Compression.h"; sourceTree = "<group>"; };
 		5FF8FF781C8978AD00495598 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
 		5FF8FF791C8978AD00495598 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		5FF8FF7E1C8978BD00495598 /* MinStatusBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinStatusBL.h; path = ElderlyCare/BusinessLogicLayer/MinStatusBL.h; sourceTree = "<group>"; };
-		5FF8FF7F1C8978BD00495598 /* MinStatusBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinStatusBL.m; path = ElderlyCare/BusinessLogicLayer/MinStatusBL.m; sourceTree = "<group>"; };
+		5FF8FF7E1C8978BD00495598 /* ZJZUserInfoBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZUserInfoBL.h; path = ElderlyCare/BusinessLogicLayer/ZJZUserInfoBL.h; sourceTree = "<group>"; };
+		5FF8FF7F1C8978BD00495598 /* ZJZUserInfoBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZUserInfoBL.m; path = ElderlyCare/BusinessLogicLayer/ZJZUserInfoBL.m; sourceTree = "<group>"; };
 		5FF8FF8C1C8978D100495598 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ElderlyCare/Main.storyboard; sourceTree = "<group>"; };
-		5FF8FF9A1C89795500495598 /* ChartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartTableViewController.h; path = ElderlyCare/MainVC/tab1/ChartTableViewController.h; sourceTree = "<group>"; };
-		5FF8FF9B1C89795500495598 /* ChartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartTableViewController.m; path = ElderlyCare/MainVC/tab1/ChartTableViewController.m; sourceTree = "<group>"; };
-		5FF8FF9C1C89795500495598 /* MasterCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterCalendarVC.h; path = ElderlyCare/MainVC/tab1/MasterCalendarVC.h; sourceTree = "<group>"; };
-		5FF8FF9D1C89795500495598 /* MasterCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterCalendarVC.m; path = ElderlyCare/MainVC/tab1/MasterCalendarVC.m; sourceTree = "<group>"; };
+		5FF8FF9A1C89795500495598 /* ZJZChartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZChartTableViewController.h; path = ElderlyCare/MainVC/tab1/ZJZChartTableViewController.h; sourceTree = "<group>"; };
+		5FF8FF9B1C89795500495598 /* ZJZChartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZChartTableViewController.m; path = ElderlyCare/MainVC/tab1/ZJZChartTableViewController.m; sourceTree = "<group>"; };
+		5FF8FF9C1C89795500495598 /* ZJZMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZMasterViewController.h; path = ElderlyCare/MainVC/tab1/ZJZMasterViewController.h; sourceTree = "<group>"; };
+		5FF8FF9D1C89795500495598 /* ZJZMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZMasterViewController.m; path = ElderlyCare/MainVC/tab1/ZJZMasterViewController.m; sourceTree = "<group>"; };
 		5FF8FF9E1C89795500495598 /* ZFChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZFChartViewController.h; path = ElderlyCare/MainVC/tab1/ZFChartViewController.h; sourceTree = "<group>"; };
 		5FF8FF9F1C89795500495598 /* ZFChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZFChartViewController.m; path = ElderlyCare/MainVC/tab1/ZFChartViewController.m; sourceTree = "<group>"; };
-		5FF8FFA31C89796900495598 /* ExpertSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpertSystemViewController.h; path = ElderlyCare/ExpertSystemViewController.h; sourceTree = "<group>"; };
-		5FF8FFA41C89796900495598 /* ExpertSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpertSystemViewController.m; path = ElderlyCare/ExpertSystemViewController.m; sourceTree = "<group>"; };
-		5FF8FFA91C89798700495598 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreViewController.h; path = ElderlyCare/MoreViewController.h; sourceTree = "<group>"; };
-		5FF8FFAA1C89798700495598 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreViewController.m; path = ElderlyCare/MoreViewController.m; sourceTree = "<group>"; };
+		5FF8FFA31C89796900495598 /* ZJZExpertSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZExpertSystemViewController.h; path = ElderlyCare/ZJZExpertSystemViewController.h; sourceTree = "<group>"; };
+		5FF8FFA41C89796900495598 /* ZJZExpertSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZExpertSystemViewController.m; path = ElderlyCare/ZJZExpertSystemViewController.m; sourceTree = "<group>"; };
+		5FF8FFA91C89798700495598 /* ZJZMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZMoreViewController.h; path = ElderlyCare/ZJZMoreViewController.h; sourceTree = "<group>"; };
+		5FF8FFAA1C89798700495598 /* ZJZMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZMoreViewController.m; path = ElderlyCare/ZJZMoreViewController.m; sourceTree = "<group>"; };
 		7DD102B3195812850017EB4C /* ElderlyCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElderlyCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD102B6195812850017EB4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DD102B8195812860017EB4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -317,8 +320,8 @@
 		5FBFC80F1C87F00000587CB7 /* tab2 */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FFA31C89796900495598 /* ExpertSystemViewController.h */,
-				5FF8FFA41C89796900495598 /* ExpertSystemViewController.m */,
+				5FF8FFA31C89796900495598 /* ZJZExpertSystemViewController.h */,
+				5FF8FFA41C89796900495598 /* ZJZExpertSystemViewController.m */,
 			);
 			name = tab2;
 			sourceTree = "<group>";
@@ -326,8 +329,8 @@
 		5FBFC8101C87F00D00587CB7 /* tab4 */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FFA91C89798700495598 /* MoreViewController.h */,
-				5FF8FFAA1C89798700495598 /* MoreViewController.m */,
+				5FF8FFA91C89798700495598 /* ZJZMoreViewController.h */,
+				5FF8FFAA1C89798700495598 /* ZJZMoreViewController.m */,
 			);
 			name = tab4;
 			sourceTree = "<group>";
@@ -335,8 +338,8 @@
 		5FD0BCC11C845259007F7AE4 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FF7E1C8978BD00495598 /* MinStatusBL.h */,
-				5FF8FF7F1C8978BD00495598 /* MinStatusBL.m */,
+				5FF8FF7E1C8978BD00495598 /* ZJZUserInfoBL.h */,
+				5FF8FF7F1C8978BD00495598 /* ZJZUserInfoBL.m */,
 			);
 			name = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -344,9 +347,8 @@
 		5FD0BCC51C84543E007F7AE4 /* dao */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FF6F1C8978AD00495598 /* TBXML */,
-				5FF8FF6C1C89786800495598 /* MinStatusDAO.h */,
-				5FF8FF6D1C89786800495598 /* MinStatusDAO.m */,
+				5FF8FF6C1C89786800495598 /* ZJZInfoDAO.h */,
+				5FF8FF6D1C89786800495598 /* ZJZInfoDAO.m */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -354,8 +356,13 @@
 		5FD0BCC61C845444007F7AE4 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FF691C89784900495598 /* MinStatus.h */,
-				5FF8FF6A1C89784900495598 /* MinStatus.m */,
+				5FF8FF6F1C8978AD00495598 /* TBXML */,
+				5FF8FF701C8978AD00495598 /* ZJZUserInfoXMLParser.h */,
+				5FF8FF711C8978AD00495598 /* ZJZUserInfoXMLParser.m */,
+				5F71C7E71C8C641A00F05A31 /* ZJZHourInfo.h */,
+				5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */,
+				5F71C7EA1C8C64A600F05A31 /* ZJZDailyInfo.h */,
+				5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */,
 			);
 			name = domain;
 			sourceTree = "<group>";
@@ -418,10 +425,10 @@
 		5FE1C8801C5B563B00D4D5A0 /* tab1 */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FF9A1C89795500495598 /* ChartTableViewController.h */,
-				5FF8FF9B1C89795500495598 /* ChartTableViewController.m */,
-				5FF8FF9C1C89795500495598 /* MasterCalendarVC.h */,
-				5FF8FF9D1C89795500495598 /* MasterCalendarVC.m */,
+				5FF8FF9A1C89795500495598 /* ZJZChartTableViewController.h */,
+				5FF8FF9B1C89795500495598 /* ZJZChartTableViewController.m */,
+				5FF8FF9C1C89795500495598 /* ZJZMasterViewController.h */,
+				5FF8FF9D1C89795500495598 /* ZJZMasterViewController.m */,
 				5FF8FF9E1C89795500495598 /* ZFChartViewController.h */,
 				5FF8FF9F1C89795500495598 /* ZFChartViewController.m */,
 			);
@@ -615,8 +622,8 @@
 		5FF801091C897D0900495598 /* tab3 */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8010A1C897D2000495598 /* CenterViewController.h */,
-				5FF8010B1C897D2000495598 /* CenterViewController.m */,
+				5FF8010A1C897D2000495598 /* ZJZCenterViewController.h */,
+				5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */,
 			);
 			name = tab3;
 			sourceTree = "<group>";
@@ -624,8 +631,6 @@
 		5FF8FF6F1C8978AD00495598 /* TBXML */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8FF701C8978AD00495598 /* MinStatusTBXMLParser.h */,
-				5FF8FF711C8978AD00495598 /* MinStatusTBXMLParser.m */,
 				5FF8FF721C8978AD00495598 /* TBXML-Code */,
 				5FF8FF761C8978AD00495598 /* TBXML-Headers */,
 			);
@@ -814,7 +819,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF8FFA11C89795500495598 /* MasterCalendarVC.m in Sources */,
+				5FF8FFA11C89795500495598 /* ZJZMasterViewController.m in Sources */,
 				5FF800A31C8979EB00495598 /* LunarCalendar.m in Sources */,
 				5FF800B61C897B8600495598 /* main.m in Sources */,
 				5FF8FF7D1C8978AD00495598 /* TBXML.m in Sources */,
@@ -827,9 +832,10 @@
 				5FF8009D1C8979EB00495598 /* FMDatabase.m in Sources */,
 				5FF800A11C8979EB00495598 /* FMResultSet.m in Sources */,
 				5FF800A41C8979EB00495598 /* NSDate+convenience.m in Sources */,
-				5FF8010C1C897D2000495598 /* CenterViewController.m in Sources */,
+				5FF8010C1C897D2000495598 /* ZJZCenterViewController.m in Sources */,
 				5FF800D11C897BA600495598 /* MKNetworkOperation.m in Sources */,
 				5FF801031C897BC500495598 /* ZFLineChart.m in Sources */,
+				5F71C7E91C8C641A00F05A31 /* ZJZHourInfo.m in Sources */,
 				5FF800CB1C897BA600495598 /* NSData+Base64.m in Sources */,
 				5FF8009F1C8979EB00495598 /* FMDatabasePool.m in Sources */,
 				5FF800A61C8979EB00495598 /* UIColor+expanded.m in Sources */,
@@ -838,16 +844,15 @@
 				5FF801081C897CD300495598 /* AppDelegate.m in Sources */,
 				5FF800A81C8979EB00495598 /* VRGCalendarView.m in Sources */,
 				5FF801021C897BC500495598 /* ZFLine.m in Sources */,
-				5FF8FFA51C89796900495598 /* ExpertSystemViewController.m in Sources */,
+				5FF8FFA51C89796900495598 /* ZJZExpertSystemViewController.m in Sources */,
 				5FF8FF7C1C8978AD00495598 /* TBXML+HTTP.m in Sources */,
 				5FF800FA1C897BC500495598 /* UIView+Zirkfied.m in Sources */,
 				5FF800F91C897BC500495598 /* UIColor+Zirkfied.m in Sources */,
-				5FF8FF7A1C8978AD00495598 /* MinStatusTBXMLParser.m in Sources */,
-				5FF8FF6E1C89786800495598 /* MinStatusDAO.m in Sources */,
+				5FF8FF7A1C8978AD00495598 /* ZJZUserInfoXMLParser.m in Sources */,
+				5FF8FF6E1C89786800495598 /* ZJZInfoDAO.m in Sources */,
 				5FF800FB1C897BC500495598 /* ZFConst.m in Sources */,
 				5FF8009E1C8979EB00495598 /* FMDatabaseAdditions.m in Sources */,
-				5FF8FF6B1C89784900495598 /* MinStatus.m in Sources */,
-				5FF8FF801C8978BD00495598 /* MinStatusBL.m in Sources */,
+				5FF8FF801C8978BD00495598 /* ZJZUserInfoBL.m in Sources */,
 				5FF800F81C897BC500495598 /* NSString+Zirkfied.m in Sources */,
 				5FF800A51C8979EB00495598 /* NSMutableArray+convenience.m in Sources */,
 				5FF800CE1C897BA600495598 /* NSString+MKNetworkKitAdditions.m in Sources */,
@@ -856,8 +861,9 @@
 				5FF800FC1C897BC500495598 /* ZFBar.m in Sources */,
 				5FF801051C897BC500495598 /* ZFTranslucencePath.m in Sources */,
 				5FF800CC1C897BA600495598 /* NSDate+RFC1123.m in Sources */,
-				5FF8FFAB1C89798700495598 /* MoreViewController.m in Sources */,
-				5FF8FFA01C89795500495598 /* ChartTableViewController.m in Sources */,
+				5FF8FFAB1C89798700495598 /* ZJZMoreViewController.m in Sources */,
+				5FF8FFA01C89795500495598 /* ZJZChartTableViewController.m in Sources */,
+				5F71C7EC1C8C64A700F05A31 /* ZJZDailyInfo.m in Sources */,
 				5FF800A21C8979EB00495598 /* CYDatetime.m in Sources */,
 				5FF800CF1C897BA600495598 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				5FF8FFA21C89795500495598 /* ZFChartViewController.m in Sources */,

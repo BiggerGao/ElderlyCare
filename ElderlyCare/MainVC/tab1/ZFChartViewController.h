@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum{
+typedef NS_ENUM(NSInteger, kChartType) {
     KChartTypeBarChart = 0,
     KChartTypeLineChart = 1,
     KChartTypePieChart = 2
-}kChartType;
+};
 
 @interface ZFChartViewController : UIViewController
 
@@ -28,11 +28,11 @@ typedef enum{
 @property (nonatomic, assign) kChartType chartType;
 
 // 传递获得的数据
-@property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, copy) NSDictionary *dict;
 // 解析数组
-@property (nonatomic, strong) NSArray *theData;
+@property (nonatomic, copy) NSArray *theData;
 // 日期
-@property (nonatomic, strong) NSString *date;
+@property (nonatomic, copy) NSString *date;
 
 - (void)loadData:(NSNotification *)noti;
 

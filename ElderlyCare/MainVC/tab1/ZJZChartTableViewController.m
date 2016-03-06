@@ -2,22 +2,22 @@
 //  detailVC.m
 //  CareElder
 //
-//  Created by Jzzhou on 16/1/29.
+//  Created by Jzzhou on 16/2/29.
 //
 //
 
-#import "ChartTableViewController.h"
+#import "ZJZChartTableViewController.h"
 
 #import "ZFChartViewController.h"
-#import "MinStatusBL.h"
+#import "ZJZUserInfoBL.h"
 
-@interface ChartTableViewController ()
+@interface ZJZChartTableViewController ()
 
-@property (nonatomic, strong) NSArray *titleArray;
+@property (nonatomic, copy) NSArray *titleArray;
 
 @end
 
-@implementation ChartTableViewController
+@implementation ZJZChartTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,13 +58,13 @@
     ZFChartViewController *viewController = [[ZFChartViewController alloc] init];
     kChartType type = (kChartType)[indexPath row];
     
-    MinStatusBL *minStatusBL = [[MinStatusBL alloc] init];
+    ZJZUserInfoBL *minStatusBL = [[ZJZUserInfoBL alloc] init];
     // 选择扇形图
     if(type == KChartTypePieChart)
     {
-        [minStatusBL getDataOfOneHour:@"anna" at:_selectedTime withChartType:2];
+        [minStatusBL getUserInfo:@"anna" at:_selectedTime withChartType:2];
     } else { // 选择柱形或折线图
-        [minStatusBL getDataOfOneHour:@"anna" at:_selectedTime withChartType:1];
+        [minStatusBL getUserInfo:@"anna" at:_selectedTime withChartType:1];
     }
     
     viewController.chartType = type;

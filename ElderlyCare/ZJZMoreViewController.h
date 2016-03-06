@@ -1,5 +1,5 @@
 //
-//  ExpertSystemViewController.h
+//  MoreViewController.h
 //  CareElder
 //
 //  Created by Jzzhou on 16/3/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExpertSystemViewController : UIViewController
+@interface ZJZMoreViewController : UIViewController
 
 @end

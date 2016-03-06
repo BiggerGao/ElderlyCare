@@ -1,32 +1,31 @@
 //
-//  CenterViewController.m
+//  ExpertSystemViewController.m
 //  CareElder
 //
 //  Created by Jzzhou on 16/3/3.
 //
 //
 
-#import "CenterViewController.h"
+#import "ZJZExpertSystemViewController.h"
 
-@interface CenterViewController ()
+@interface ZJZExpertSystemViewController ()
 
 @end
 
-@implementation CenterViewController
+@implementation ZJZExpertSystemViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"专家系统";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationController.navigationBar.translucent = NO;
     
-    self.navigationItem.title = @"个人中心";
-    self.view.backgroundColor = [UIColor whiteColor];
-    
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-    NSDictionary *naviTitleADict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:20.0],NSFontAttributeName,nil];//[UIColor whiteColor],NSForegroundColorAttributeName,
-    [self.navigationController.navigationBar setTitleTextAttributes:naviTitleADict];
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    NSDictionary *naviTitleDict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:20.0], NSFontAttributeName, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:naviTitleDict];
+    
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:213/255.0 green:54/255.0 blue:65/255.0 alpha:1]];
     
 }

@@ -1,5 +1,5 @@
 //
-//  MoreViewController.h
+//  CenterViewController.h
 //  CareElder
 //
 //  Created by Jzzhou on 16/3/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoreViewController : UIViewController
+@interface ZJZCenterViewController : UIViewController
 
 @end

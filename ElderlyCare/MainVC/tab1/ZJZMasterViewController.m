@@ -2,17 +2,17 @@
 //  CYCalendarVC.m
 //  CareElder
 //
-//  Created by Jzzhou on 16/1/28.
+//  Created by Jzzhou on 16/2/28.
 //
 //
 
-#import "MasterCalendarVC.h"
-#import "ChartTableViewController.h"
-#import "MinStatusBL.h"
+#import "ZJZMasterViewController.h"
+#import "ZJZChartTableViewController.h"
+#import "ZJZUserInfoBL.h"
 
 #define IOS6_LATER (floor(NSFoundationVersionNumber)>NSFoundationVersionNumber_iOS_6_1)
 
-@interface MasterCalendarVC ()
+@interface ZJZMasterViewController ()
 {
     UIScrollView        *_detailScrollView;
     UILabel             *_lunarLabel;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation MasterCalendarVC
+@implementation ZJZMasterViewController
 {
     NSString *_previousSelectedDate;
     NSString *_selectedTime;
@@ -164,7 +164,7 @@
 #pragma mark - 数据存储传递
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ChartTableViewController *descon = (ChartTableViewController *)segue.destinationViewController;
+    ZJZChartTableViewController *descon = (ZJZChartTableViewController *)segue.destinationViewController;
     descon.selectedTime = _selectedTime;
 }
 

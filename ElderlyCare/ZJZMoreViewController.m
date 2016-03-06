@@ -6,13 +6,13 @@
 //
 //
 
-#import "MoreViewController.h"
+#import "ZJZMoreViewController.h"
 
-@interface MoreViewController ()
+@interface ZJZMoreViewController ()
 
 @end
 
-@implementation MoreViewController
+@implementation ZJZMoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
