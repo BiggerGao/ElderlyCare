@@ -10,9 +10,9 @@
 
 @interface ZJZHourInfo : NSObject
 
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *sport;
-@property (nonatomic, strong) NSString *rest;
-@property (nonatomic, strong) NSString *deviceID;
+@property (nonatomic, copy) NSString *date;
+@property (nonatomic, copy) NSString *sport;
+@property (nonatomic, copy) NSString *rest;
+@property (nonatomic, copy) NSString *deviceID;
 
 @end

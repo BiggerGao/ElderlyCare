@@ -10,11 +10,11 @@
 
 @interface ZJZDailyInfo : NSObject
 
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *walk;
-@property (nonatomic, strong) NSString *run;
-@property (nonatomic, strong) NSString *rest;
-@property (nonatomic, strong) NSString *sleep;
-@property (nonatomic, strong) NSString *deviceID;
+@property (nonatomic, copy) NSString *date;
+@property (nonatomic, copy) NSString *walk;
+@property (nonatomic, copy) NSString *run;
+@property (nonatomic, copy) NSString *rest;
+@property (nonatomic, copy) NSString *sleep;
+@property (nonatomic, copy) NSString *deviceID;
 
 @end
