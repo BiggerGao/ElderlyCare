@@ -11,10 +11,19 @@
 
 @implementation ZJZUserInfoBL
 
+- (void)findAllUsers {
+    ZJZInfoDAO *infoDao = [ZJZInfoDAO sharedManager];
+    [infoDao findAllUsers];
+}
 
 - (void)getUserInfo:(NSString *)userName at:(NSString *)date withChartType:(NSInteger)type
 {
     ZJZInfoDAO *infoDAO = [ZJZInfoDAO sharedManager];
-    [infoDAO getUserInfo:userName at:date withChartType:type];
+    [infoDAO findUserInfo:userName at:date withChartType:type];
+}
+
+- (void)findAllInfo:(NSString *)username {
+    ZJZInfoDAO *infoDAO = [ZJZInfoDAO sharedManager];
+    [infoDAO findAllSportStatistic:username];
 }
 @end

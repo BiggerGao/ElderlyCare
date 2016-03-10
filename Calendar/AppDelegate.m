@@ -7,12 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "ZFConst.h"
 #import "TTViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // navigationBar 全局设置
+    UINavigationBar* navigationBar = [UINavigationBar appearance];
+    navigationBar.translucent = NO;
+    [navigationBar setBarStyle:UIBarStyleBlack];
+    
+    NSDictionary *naviTitleDict = @{NSFontAttributeName: [UIFont fontWithName:@"Futura-Medium" size:20.0]};
+    [navigationBar setTitleTextAttributes:naviTitleDict];
+    [navigationBar setTintColor:[UIColor whiteColor]];
+    [navigationBar setBarTintColor:ZFColor(213, 54, 65, 1)];
+    
+    // 返回键全局设置
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+    
+    // tabBar全局设置
+    UITabBar *tabBar = [UITabBar appearance];
+    [tabBar setSelectionIndicatorImage:[UIImage imageNamed:@"selectedTabBar"]];
+    [tabBar setSelectedImageTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 

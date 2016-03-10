@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F20FB5D1C90496500804816 /* ZJZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F20FB5C1C90496500804816 /* ZJZLoginViewController.m */; };
+		5F20FB601C906A1600804816 /* ZJZTextFieldBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F20FB5F1C906A1600804816 /* ZJZTextFieldBackground.m */; };
 		5F71C7E91C8C641A00F05A31 /* ZJZHourInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */; };
 		5F71C7EC1C8C64A700F05A31 /* ZJZDailyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */; };
+		5FA3BB491C910EDE009255CB /* ZJZCenterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA3BB481C910EDE009255CB /* ZJZCenterItem.m */; };
+		5FA3BB4C1C910FEF009255CB /* ZJZCenterSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA3BB4B1C910FEF009255CB /* ZJZCenterSection.m */; };
+		5FA3BB4E1C911609009255CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA3BB4D1C911609009255CB /* Images.xcassets */; };
+		5FA3BB561C912896009255CB /* ZJZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA3BB551C912896009255CB /* ZJZUserInfo.m */; };
+		5FA3BB591C913F55009255CB /* ZJZDaysInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA3BB581C913F55009255CB /* ZJZDaysInfoTableViewController.m */; };
 		5FB5765A1C8409FA00847B28 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB576591C8409FA00847B28 /* CFNetwork.framework */; };
 		5FB5765C1C840A1400847B28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB5765B1C840A1400847B28 /* SystemConfiguration.framework */; };
 		5FB5765E1C840A1800847B28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB5765D1C840A1800847B28 /* Security.framework */; };
@@ -89,7 +96,7 @@
 		5FF801081C897CD300495598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF801071C897CD300495598 /* AppDelegate.m */; };
 		5FF8010C1C897D2000495598 /* ZJZCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */; };
 		5FF8FF6E1C89786800495598 /* ZJZInfoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF6D1C89786800495598 /* ZJZInfoDAO.m */; };
-		5FF8FF7A1C8978AD00495598 /* ZJZUserInfoXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF711C8978AD00495598 /* ZJZUserInfoXMLParser.m */; };
+		5FF8FF7A1C8978AD00495598 /* ZJZXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF711C8978AD00495598 /* ZJZXMLParser.m */; };
 		5FF8FF7B1C8978AD00495598 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF731C8978AD00495598 /* TBXML+Compression.m */; };
 		5FF8FF7C1C8978AD00495598 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF741C8978AD00495598 /* TBXML+HTTP.m */; };
 		5FF8FF7D1C8978AD00495598 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF8FF751C8978AD00495598 /* TBXML.m */; };
@@ -107,10 +114,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F20FB5B1C90496500804816 /* ZJZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZLoginViewController.h; path = ElderlyCare/ZJZLoginViewController.h; sourceTree = "<group>"; };
+		5F20FB5C1C90496500804816 /* ZJZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZLoginViewController.m; path = ElderlyCare/ZJZLoginViewController.m; sourceTree = "<group>"; };
+		5F20FB5E1C906A1600804816 /* ZJZTextFieldBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZTextFieldBackground.h; path = ElderlyCare/ZJZTextFieldBackground.h; sourceTree = "<group>"; };
+		5F20FB5F1C906A1600804816 /* ZJZTextFieldBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZTextFieldBackground.m; path = ElderlyCare/ZJZTextFieldBackground.m; sourceTree = "<group>"; };
 		5F71C7E71C8C641A00F05A31 /* ZJZHourInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZHourInfo.h; path = ElderlyCare/PersistanceLayer/ZJZHourInfo.h; sourceTree = "<group>"; };
 		5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZHourInfo.m; path = ElderlyCare/PersistanceLayer/ZJZHourInfo.m; sourceTree = "<group>"; };
 		5F71C7EA1C8C64A600F05A31 /* ZJZDailyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZDailyInfo.h; path = ElderlyCare/PersistanceLayer/ZJZDailyInfo.h; sourceTree = "<group>"; };
 		5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZDailyInfo.m; path = ElderlyCare/PersistanceLayer/ZJZDailyInfo.m; sourceTree = "<group>"; };
+		5FA3BB471C910EDE009255CB /* ZJZCenterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZCenterItem.h; path = ElderlyCare/ZJZCenterItem.h; sourceTree = "<group>"; };
+		5FA3BB481C910EDE009255CB /* ZJZCenterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZCenterItem.m; path = ElderlyCare/ZJZCenterItem.m; sourceTree = "<group>"; };
+		5FA3BB4A1C910FEF009255CB /* ZJZCenterSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZCenterSection.h; sourceTree = "<group>"; };
+		5FA3BB4B1C910FEF009255CB /* ZJZCenterSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZCenterSection.m; sourceTree = "<group>"; };
+		5FA3BB4D1C911609009255CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Calendar/Images.xcassets; sourceTree = "<group>"; };
+		5FA3BB541C912896009255CB /* ZJZUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZUserInfo.h; path = ElderlyCare/PersistanceLayer/ZJZUserInfo.h; sourceTree = "<group>"; };
+		5FA3BB551C912896009255CB /* ZJZUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZUserInfo.m; path = ElderlyCare/PersistanceLayer/ZJZUserInfo.m; sourceTree = "<group>"; };
+		5FA3BB571C913F55009255CB /* ZJZDaysInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZDaysInfoTableViewController.h; path = ElderlyCare/ZJZDaysInfoTableViewController.h; sourceTree = "<group>"; };
+		5FA3BB581C913F55009255CB /* ZJZDaysInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZDaysInfoTableViewController.m; path = ElderlyCare/ZJZDaysInfoTableViewController.m; sourceTree = "<group>"; };
 		5FB576591C8409FA00847B28 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5FB5765B1C840A1400847B28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5FB5765D1C840A1800847B28 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -237,8 +257,8 @@
 		5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZCenterViewController.m; path = ElderlyCare/ZJZCenterViewController.m; sourceTree = "<group>"; };
 		5FF8FF6C1C89786800495598 /* ZJZInfoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZInfoDAO.h; path = ElderlyCare/PersistanceLayer/ZJZInfoDAO.h; sourceTree = "<group>"; };
 		5FF8FF6D1C89786800495598 /* ZJZInfoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZInfoDAO.m; path = ElderlyCare/PersistanceLayer/ZJZInfoDAO.m; sourceTree = "<group>"; };
-		5FF8FF701C8978AD00495598 /* ZJZUserInfoXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZUserInfoXMLParser.h; path = ElderlyCare/BusinessLogicLayer/TBXML/ZJZUserInfoXMLParser.h; sourceTree = "<group>"; };
-		5FF8FF711C8978AD00495598 /* ZJZUserInfoXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZUserInfoXMLParser.m; path = ElderlyCare/BusinessLogicLayer/TBXML/ZJZUserInfoXMLParser.m; sourceTree = "<group>"; };
+		5FF8FF701C8978AD00495598 /* ZJZXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZXMLParser.h; sourceTree = "<group>"; };
+		5FF8FF711C8978AD00495598 /* ZJZXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZXMLParser.m; sourceTree = "<group>"; };
 		5FF8FF731C8978AD00495598 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
 		5FF8FF741C8978AD00495598 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
 		5FF8FF751C8978AD00495598 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
@@ -288,6 +308,7 @@
 		5F1708621C4212F3000CE7B5 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5FA3BB4D1C911609009255CB /* Images.xcassets */,
 				5FF801061C897CD300495598 /* AppDelegate.h */,
 				5FF801071C897CD300495598 /* AppDelegate.m */,
 				5FF8FF8C1C8978D100495598 /* Main.storyboard */,
@@ -306,6 +327,32 @@
 				5FF800B71C897BA600495598 /* MKNetworkKit */,
 			);
 			name = ThirdPart;
+			sourceTree = "<group>";
+		};
+		5FA3BB441C910E16009255CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F20FB5B1C90496500804816 /* ZJZLoginViewController.h */,
+				5F20FB5C1C90496500804816 /* ZJZLoginViewController.m */,
+				5FF8010A1C897D2000495598 /* ZJZCenterViewController.h */,
+				5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */,
+				5FA3BB571C913F55009255CB /* ZJZDaysInfoTableViewController.h */,
+				5FA3BB581C913F55009255CB /* ZJZDaysInfoTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5FA3BB461C910E4E009255CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F20FB5E1C906A1600804816 /* ZJZTextFieldBackground.h */,
+				5F20FB5F1C906A1600804816 /* ZJZTextFieldBackground.m */,
+				5FA3BB471C910EDE009255CB /* ZJZCenterItem.h */,
+				5FA3BB481C910EDE009255CB /* ZJZCenterItem.m */,
+				5FA3BB4A1C910FEF009255CB /* ZJZCenterSection.h */,
+				5FA3BB4B1C910FEF009255CB /* ZJZCenterSection.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		5FB5765F1C840A6B00847B28 /* PersistanceLayer */ = {
@@ -357,12 +404,12 @@
 			isa = PBXGroup;
 			children = (
 				5FF8FF6F1C8978AD00495598 /* TBXML */,
-				5FF8FF701C8978AD00495598 /* ZJZUserInfoXMLParser.h */,
-				5FF8FF711C8978AD00495598 /* ZJZUserInfoXMLParser.m */,
 				5F71C7E71C8C641A00F05A31 /* ZJZHourInfo.h */,
 				5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */,
 				5F71C7EA1C8C64A600F05A31 /* ZJZDailyInfo.h */,
 				5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */,
+				5FA3BB541C912896009255CB /* ZJZUserInfo.h */,
+				5FA3BB551C912896009255CB /* ZJZUserInfo.m */,
 			);
 			name = domain;
 			sourceTree = "<group>";
@@ -622,8 +669,8 @@
 		5FF801091C897D0900495598 /* tab3 */ = {
 			isa = PBXGroup;
 			children = (
-				5FF8010A1C897D2000495598 /* ZJZCenterViewController.h */,
-				5FF8010B1C897D2000495598 /* ZJZCenterViewController.m */,
+				5FA3BB461C910E4E009255CB /* View */,
+				5FA3BB441C910E16009255CB /* Controller */,
 			);
 			name = tab3;
 			sourceTree = "<group>";
@@ -631,6 +678,8 @@
 		5FF8FF6F1C8978AD00495598 /* TBXML */ = {
 			isa = PBXGroup;
 			children = (
+				5FF8FF701C8978AD00495598 /* ZJZXMLParser.h */,
+				5FF8FF711C8978AD00495598 /* ZJZXMLParser.m */,
 				5FF8FF721C8978AD00495598 /* TBXML-Code */,
 				5FF8FF761C8978AD00495598 /* TBXML-Headers */,
 			);
@@ -771,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FF8007D1C8979CA00495598 /* TIANZIGE@3x.png in Resources */,
+				5FA3BB4E1C911609009255CB /* Images.xcassets in Resources */,
 				5FF8FF931C8978D100495598 /* Main.storyboard in Resources */,
 				5FF8005E1C8979CA00495598 /* dictionary_tabicon_bihua01.png in Resources */,
 				5FF8005D1C8979CA00495598 /* dictionary_search@3x.png in Resources */,
@@ -825,6 +875,7 @@
 				5FF8FF7D1C8978AD00495598 /* TBXML.m in Sources */,
 				5FF800D21C897BA600495598 /* Reachability.m in Sources */,
 				5FF800FF1C897BC500495598 /* ZFGenericChart.m in Sources */,
+				5FA3BB561C912896009255CB /* ZJZUserInfo.m in Sources */,
 				5FF800FD1C897BC500495598 /* ZFBarChart.m in Sources */,
 				5FF801001C897BC500495598 /* ZFLabel.m in Sources */,
 				5FF800FE1C897BC500495598 /* ZFAxisLine.m in Sources */,
@@ -833,6 +884,7 @@
 				5FF800A11C8979EB00495598 /* FMResultSet.m in Sources */,
 				5FF800A41C8979EB00495598 /* NSDate+convenience.m in Sources */,
 				5FF8010C1C897D2000495598 /* ZJZCenterViewController.m in Sources */,
+				5F20FB601C906A1600804816 /* ZJZTextFieldBackground.m in Sources */,
 				5FF800D11C897BA600495598 /* MKNetworkOperation.m in Sources */,
 				5FF801031C897BC500495598 /* ZFLineChart.m in Sources */,
 				5F71C7E91C8C641A00F05A31 /* ZJZHourInfo.m in Sources */,
@@ -848,9 +900,11 @@
 				5FF8FF7C1C8978AD00495598 /* TBXML+HTTP.m in Sources */,
 				5FF800FA1C897BC500495598 /* UIView+Zirkfied.m in Sources */,
 				5FF800F91C897BC500495598 /* UIColor+Zirkfied.m in Sources */,
-				5FF8FF7A1C8978AD00495598 /* ZJZUserInfoXMLParser.m in Sources */,
+				5FF8FF7A1C8978AD00495598 /* ZJZXMLParser.m in Sources */,
+				5FA3BB4C1C910FEF009255CB /* ZJZCenterSection.m in Sources */,
 				5FF8FF6E1C89786800495598 /* ZJZInfoDAO.m in Sources */,
 				5FF800FB1C897BC500495598 /* ZFConst.m in Sources */,
+				5F20FB5D1C90496500804816 /* ZJZLoginViewController.m in Sources */,
 				5FF8009E1C8979EB00495598 /* FMDatabaseAdditions.m in Sources */,
 				5FF8FF801C8978BD00495598 /* ZJZUserInfoBL.m in Sources */,
 				5FF800F81C897BC500495598 /* NSString+Zirkfied.m in Sources */,
@@ -865,10 +919,12 @@
 				5FF8FFA01C89795500495598 /* ZJZChartTableViewController.m in Sources */,
 				5F71C7EC1C8C64A700F05A31 /* ZJZDailyInfo.m in Sources */,
 				5FF800A21C8979EB00495598 /* CYDatetime.m in Sources */,
+				5FA3BB591C913F55009255CB /* ZJZDaysInfoTableViewController.m in Sources */,
 				5FF800CF1C897BA600495598 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				5FF8FFA21C89795500495598 /* ZFChartViewController.m in Sources */,
 				5FF8FF7B1C8978AD00495598 /* TBXML+Compression.m in Sources */,
 				5FF800D01C897BA600495598 /* MKNetworkEngine.m in Sources */,
+				5FA3BB491C910EDE009255CB /* ZJZCenterItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

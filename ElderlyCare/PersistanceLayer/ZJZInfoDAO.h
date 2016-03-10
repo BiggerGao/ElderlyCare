@@ -20,10 +20,16 @@
 // 解析数据数组
 @property (nonatomic, copy) NSArray *listData;
 
-// 获取每小时数据的运动量（比例）
-- (void)getUserInfo:(NSString *)username at:(NSString *)date withChartType:(NSInteger)type;
+// 根据需求获取老人每天运动的数据数组（比例）
+- (void)findUserInfo:(NSString *)username at:(NSString *)date withChartType:(NSInteger)type;
+
+// 获得老人运动总统计量
+- (void)findAllSportStatistic:(NSString *)username;
 
 // 获得用户数据源
-- (NSString *)getUserFilePath:(NSString *)username at:(NSString *)date withChartType:(NSInteger)type;
+- (NSString *)findUserFilePath:(NSString *)username at:(NSString *)date withChartType:(NSInteger)type;
+
+// 获取所有用户(what the fuck in server)
+- (void)findAllUsers;
 
 @end

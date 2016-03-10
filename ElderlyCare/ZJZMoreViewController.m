@@ -17,11 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationController.navigationBar setTranslucent:NO];
+    
     self.title = @"更多";
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
     
 }
 

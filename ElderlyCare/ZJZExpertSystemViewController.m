@@ -20,14 +20,6 @@
     self.navigationItem.title = @"专家系统";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationController.navigationBar.translucent = NO;
-    
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-    NSDictionary *naviTitleDict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:20.0], NSFontAttributeName, nil];
-    [self.navigationController.navigationBar setTitleTextAttributes:naviTitleDict];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:213/255.0 green:54/255.0 blue:65/255.0 alpha:1]];
-    
 }
 
 - (void)didReceiveMemoryWarning {

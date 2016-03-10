@@ -55,20 +55,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZFChartViewController *viewController = [[ZFChartViewController alloc] init];
+    ZFChartViewController *chartViewController = [[ZFChartViewController alloc] init];
     kChartType type = (kChartType)[indexPath row];
     
-    ZJZUserInfoBL *minStatusBL = [[ZJZUserInfoBL alloc] init];
+    ZJZUserInfoBL *infoBL = [[ZJZUserInfoBL alloc] init];
     // 选择扇形图
     if(type == KChartTypePieChart)
     {
-        [minStatusBL getUserInfo:@"anna" at:_selectedTime withChartType:2];
+        [infoBL getUserInfo:@"anna" at:_selectedTime withChartType:2];
     } else { // 选择柱形或折线图
-        [minStatusBL getUserInfo:@"anna" at:_selectedTime withChartType:1];
+        [infoBL getUserInfo:@"anna" at:_selectedTime withChartType:1];
     }
     
-    viewController.chartType = type;
-    [self.navigationController pushViewController:viewController animated:YES];
+    chartViewController.chartType = type;
+    [self.navigationController pushViewController:chartViewController animated:YES];
 }
 
 @end

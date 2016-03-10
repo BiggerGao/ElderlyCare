@@ -37,17 +37,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self.navigationController.tabBarController.tabBar setSelectionIndicatorImage:[UIImage imageNamed:@"selectedTabBar"]];
-    [self.navigationController.tabBarController.tabBar setSelectedImageTintColor:[UIColor whiteColor]];
-    
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-    NSDictionary *naviTitleADict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Futura-Medium" size:20.0],NSFontAttributeName,nil];//[UIColor whiteColor],NSForegroundColorAttributeName,
-    [self.navigationController.navigationBar setTitleTextAttributes:naviTitleADict];
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:213/255.0 green:54/255.0 blue:65/255.0 alpha:1]];
-    
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
  
     self.navigationItem.title = @"时间表";
     
@@ -56,7 +45,6 @@
     [self.view addSubview:calendar];
     
      // iOS 7 specific
-    self.navigationController.navigationBar.translucent = NO;
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;

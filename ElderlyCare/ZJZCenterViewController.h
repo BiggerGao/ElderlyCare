@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZJZCenterViewController : UIViewController
+@interface ZJZCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end

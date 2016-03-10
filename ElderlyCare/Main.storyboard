@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0CM-Lv-6Dy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0CM-Lv-6Dy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--时间表-->
@@ -107,32 +108,65 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NQV-Ws-CZb" kind="relationship" relationship="rootViewController" id="zgc-9S-cDw"/>
+                        <segue destination="tRe-HB-B9s" kind="relationship" relationship="rootViewController" id="VCE-0T-g1Y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5W-9o-0jH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-581.5" y="1343.5"/>
+            <point key="canvasLocation" x="-569.5" y="1363.5"/>
         </scene>
         <!--Center View Controller-->
-        <scene sceneID="i4m-yW-JCO">
+        <scene sceneID="nIf-kI-29a">
             <objects>
-                <viewController id="NQV-Ws-CZb" customClass="ZJZCenterViewController" sceneMemberID="viewController">
+                <viewController id="tRe-HB-B9s" customClass="ZJZCenterViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SwY-zd-tQj"/>
-                        <viewControllerLayoutGuide type="bottom" id="7mC-cN-usF"/>
+                        <viewControllerLayoutGuide type="top" id="DFx-Dw-sua"/>
+                        <viewControllerLayoutGuide type="bottom" id="djP-kT-r9R"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tCP-E4-GMi">
+                    <view key="view" contentMode="scaleToFill" id="1Vr-Ho-eha">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eYS-70-t5i"/>
+                    <navigationItem key="navigationItem" id="UHF-ul-0rB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="iY2-fq-7qy" kind="push" identifier="ShowDaysInfo" id="mSy-L6-XWp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cx2-fb-ypX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDy-yz-p9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29.5" y="1349.5"/>
+            <point key="canvasLocation" x="-31.5" y="1371.5"/>
+        </scene>
+        <!--Days Info Table View Controller-->
+        <scene sceneID="UCg-gJ-D51">
+            <objects>
+                <tableViewController id="iY2-fq-7qy" customClass="ZJZDaysInfoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HI8-db-mI8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tj1-SN-93Q">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tj1-SN-93Q" id="ooM-sl-Dvx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iY2-fq-7qy" id="Pqt-Js-P0G"/>
+                            <outlet property="delegate" destination="iY2-fq-7qy" id="eAW-87-sIh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4OO-5T-8Rk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="act-vK-qQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="1371.5"/>
         </scene>
         <!--专家系统-->
         <scene sceneID="xad-km-zwg">
