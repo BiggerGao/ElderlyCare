@@ -17,3 +17,7 @@
 - 扇形图
 - 
 ![](https://github.com/Turf-z/Library-ElderlyCare/blob/master/4.png)
+
+
+- 个人中心
+![](https://github.com/Turf-z/Library-ElderlyCare/blob/master/5.png)
