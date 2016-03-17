@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F1E690F1C9AAA5F00D5DD37 /* ZJZContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E690E1C9AAA5F00D5DD37 /* ZJZContainerViewController.m */; };
 		5F20FB601C906A1600804816 /* ZJZTextFieldBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F20FB5F1C906A1600804816 /* ZJZTextFieldBackground.m */; };
 		5F71C7E91C8C641A00F05A31 /* ZJZHourInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F71C7E81C8C641A00F05A31 /* ZJZHourInfo.m */; };
 		5F71C7EC1C8C64A700F05A31 /* ZJZDailyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F71C7EB1C8C64A700F05A31 /* ZJZDailyInfo.m */; };
@@ -120,6 +121,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F1E690D1C9AAA5F00D5DD37 /* ZJZContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZContainerViewController.h; path = ElderlyCare/presentation/ZJZContainerViewController.h; sourceTree = "<group>"; };
+		5F1E690E1C9AAA5F00D5DD37 /* ZJZContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZContainerViewController.m; path = ElderlyCare/presentation/ZJZContainerViewController.m; sourceTree = "<group>"; };
 		5F20FB5E1C906A1600804816 /* ZJZTextFieldBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZTextFieldBackground.h; path = ElderlyCare/presentation/ZJZTextFieldBackground.h; sourceTree = "<group>"; };
 		5F20FB5F1C906A1600804816 /* ZJZTextFieldBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJZTextFieldBackground.m; path = ElderlyCare/presentation/ZJZTextFieldBackground.m; sourceTree = "<group>"; };
 		5F71C7E71C8C641A00F05A31 /* ZJZHourInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJZHourInfo.h; path = ElderlyCare/PersistanceLayer/ZJZHourInfo.h; sourceTree = "<group>"; };
@@ -354,14 +357,16 @@
 		5FA3BB441C910E16009255CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5FBB0EEB1C9A5BFF00AA1B63 /* ZJZCenterViewController.h */,
-				5FBB0EEC1C9A5BFF00AA1B63 /* ZJZCenterViewController.m */,
-				5FBB0EED1C9A5BFF00AA1B63 /* ZJZDaysInfoTableViewController.h */,
-				5FBB0EEE1C9A5BFF00AA1B63 /* ZJZDaysInfoTableViewController.m */,
+				5F1E690D1C9AAA5F00D5DD37 /* ZJZContainerViewController.h */,
+				5F1E690E1C9AAA5F00D5DD37 /* ZJZContainerViewController.m */,
 				5FBB0EEF1C9A5BFF00AA1B63 /* ZJZLoginViewController.h */,
 				5FBB0EF01C9A5BFF00AA1B63 /* ZJZLoginViewController.m */,
 				5FBB0EF11C9A5BFF00AA1B63 /* ZJZRegisterViewController.h */,
 				5FBB0EF21C9A5BFF00AA1B63 /* ZJZRegisterViewController.m */,
+				5FBB0EEB1C9A5BFF00AA1B63 /* ZJZCenterViewController.h */,
+				5FBB0EEC1C9A5BFF00AA1B63 /* ZJZCenterViewController.m */,
+				5FBB0EED1C9A5BFF00AA1B63 /* ZJZDaysInfoTableViewController.h */,
+				5FBB0EEE1C9A5BFF00AA1B63 /* ZJZDaysInfoTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1012,6 +1017,7 @@
 				5FBB0EEA1C9A5BDF00AA1B63 /* ZJZCenterSection.m in Sources */,
 				5FBB0F021C9A5C4F00AA1B63 /* ZJZMoreViewController.m in Sources */,
 				5FF800FC1C897BC500495598 /* ZFBar.m in Sources */,
+				5F1E690F1C9AAA5F00D5DD37 /* ZJZContainerViewController.m in Sources */,
 				5FF801051C897BC500495598 /* ZFTranslucencePath.m in Sources */,
 				5FF800CC1C897BA600495598 /* NSDate+RFC1123.m in Sources */,
 				5FF8FFA01C89795500495598 /* ZJZChartTableViewController.m in Sources */,

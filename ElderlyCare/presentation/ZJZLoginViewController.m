@@ -6,6 +6,7 @@
 //
 //
 
+#import "ZJZRegisterViewController.h"
 #import "ZJZLoginViewController.h"
 #import "ZJZTextFieldBackground.h"
 #import "ZJZKeeperBL.h"
@@ -27,13 +28,15 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:216/255.0f green:209/255.0f blue:192/255.0f alpha:1]];
-    self.navigationController.navigationBarHidden = YES;
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:216/255.0f green:209/255.0f blue:192/255.0f alpha:1]];
+//    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    self.title = @"请登录";
     
     _background = [[ZJZTextFieldBackground alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width-40, 100)];
     [_background setBackgroundColor:ZFColor(245, 245, 245, 1)];
@@ -69,11 +72,11 @@
     [_registerButton setBackgroundColor:ZFColor(255, 185, 15, 1)];  // 205 149 12
     [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _registerButton.layer.cornerRadius = 5.0;
+    [_registerButton addTarget:self action:@selector(registerBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_registerButton];
     
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkkeeperAccount:)
+                                             selector:@selector(checkKeeperAccount:)
                                                  name:@"FindkeeperInfoNoti"
                                                object:nil];
 
@@ -89,6 +92,11 @@
         _password.text = keeper.password;
     }
     
+}
+
+- (void)registerBtnClicked {
+    [self.navigationController pushViewController:[[ZJZRegisterViewController alloc] init]
+                                         animated:YES];
 }
 
 - (void)loginBtnClicked {
@@ -110,9 +118,9 @@
     [keeperBL findKeeper:inputInfo];
 }
 
-- (void)checkkeeperAccount:(NSNotification*)noti {
+- (void)checkKeeperAccount:(NSNotification*)noti {
     NSArray *keepers = [noti object];
-    if (keepers.count == 0) {
+    if (keepers.count == 0 || !keepers) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"账号或密码错误"
                                                             message:@"账号或密码错误"
                                                            delegate:self
@@ -131,15 +139,10 @@
     // 保存当前用户(看护人)
     [GlobalVariables setCurrKeeper:keeper];
     
-    [self.view removeFromSuperview];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginNotification" object:[_account text]];
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginNotification" object:keeper];
 }
 
-- (void) registerBtnClicked {
-    
-}
-
+#pragma mark - 保存用户账号
 - (void)savekeeperAccountWhenLogIn:(ZJZKeeper *)keeper{
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
@@ -155,6 +158,7 @@
     
     return [array[0] stringByAppendingPathComponent:kFileName];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -26,13 +26,15 @@ static ZJZKeeperDAO *sharedManager = nil;
     return sharedManager;
 }
 
-
 #pragma mark - 查找用户
 - (void)findKeeper:(ZJZKeeper *)inputKeeper
 {
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
     MKNetworkOperation *operation = [[MKNetworkOperation alloc] init];
-    operation = [engine operationWithPath:@"selectAllUser" params:@{@"uname":inputKeeper.account, @"pwd":inputKeeper.password} httpMethod:@"GET" ssl:NO];
+    operation = [engine operationWithPath:@"selectAllUser"
+                                   params:@{@"uname":inputKeeper.account, @"pwd":inputKeeper.password}
+                               httpMethod:@"GET"
+                                      ssl:NO];
     
     [operation onCompletion:^(MKNetworkOperation *completedOperation) {
         
@@ -44,7 +46,5 @@ static ZJZKeeperDAO *sharedManager = nil;
     }];
     [engine enqueueOperation:operation];
 }
-
-
 
 @end

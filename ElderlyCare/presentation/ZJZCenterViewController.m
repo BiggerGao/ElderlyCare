@@ -12,10 +12,10 @@
 #import "ZJZCenterSection.h"
 #import "ZJZKeeperBL.h"
 #import "ZJZOldManBL.h"
+#import "GlobalVariables.h"
 
 @interface ZJZCenterViewController ()
 
-@property (nonatomic, strong) ZJZLoginViewController *loginViewController;
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, strong) NSMutableArray *groups;
 @property (nonatomic, getter=isLogIn) BOOL logIn;
@@ -36,24 +36,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"个人中心";
-    
-    _logIn = NO;
-    
-    if (!_logIn) {
-        self.view.backgroundColor = [UIColor whiteColor];
-        _loginViewController = [[ZJZLoginViewController alloc] init];
-        [self.view addSubview:_loginViewController.view];
-    }
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(initTableView:)
-                                                 name:@"LoginNotification"
-                                               object:nil];
+    self.title = @"个人中心";
+
+    [self initTableView];
 }
 
-- (void)initTableView:(NSNotification *)noti {
+- (void)initTableView {
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _username = (NSString *)noti.object;
+    ZJZKeeper *keeper = [GlobalVariables currKeeper];
+    
+    _username = keeper.account;
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
 
     _tableView.delegate = self;
@@ -61,7 +53,7 @@
     [self.view addSubview:_tableView];
     // 第一组
     ZJZCenterSection *section1 = [ZJZCenterSection initWithHeaderTitle:@"看护人" footerTitle:nil];
-    ZJZCenterItem *item1 = [ZJZCenterItem initWithTitle:@"Anna"];
+    ZJZCenterItem *item1 = [ZJZCenterItem initWithTitle:_username];
     item1.image = [UIImage imageNamed:@"me"];
     item1.height = 64;
     [section1 addItem:item1];
