@@ -8,9 +8,10 @@
 
 #import "ZJZLoginViewController.h"
 #import "ZJZTextFieldBackground.h"
-#import "ZJZUserInfoBL.h"
-#import "ZJZUserInfo.h"
+#import "ZJZKeeperBL.h"
+#import "ZJZKeeper.h"
 #import "ZFConst.h"
+#import "GlobalVariables.h"
 
 @interface ZJZLoginViewController ()
 
@@ -23,6 +24,12 @@
 @end
 
 @implementation ZJZLoginViewController
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:216/255.0f green:209/255.0f blue:192/255.0f alpha:1]];
+    self.navigationController.navigationBarHidden = YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,10 +70,29 @@
     [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _registerButton.layer.cornerRadius = 5.0;
     [self.view addSubview:_registerButton];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkkeeperAccount:)
+                                                 name:@"FindkeeperInfoNoti"
+                                               object:nil];
 
+    // 读取账号
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[self getFilePath]]) {
+        NSLog(@"filePAth:%@",[self getFilePath]);
+        NSData *data = [[NSData alloc] initWithContentsOfFile:[self getFilePath]];
+        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc]initForReadingWithData:data];
+        ZJZKeeper *keeper = [unarchiver decodeObjectForKey:kKeeperKey];
+        [unarchiver finishDecoding];
+        
+        _account.text = keeper.account;
+        _password.text = keeper.password;
+    }
+    
 }
 
-- (void) loginBtnClicked {
+- (void)loginBtnClicked {
+    // 空输入
     if ([[_account text] isEqualToString:@""] || [[_password text] isEqualToString:@""]) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"账号或密码不能为空"
                                                             message:@"账号或密码不能为空"
@@ -76,48 +102,63 @@
         [alertView show];
         return;
     }
-    ZJZUserInfoBL *infoBL = [ZJZUserInfoBL new];
-    [infoBL findAllUsers];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkUserAccount:)
-                                                 name:@"AllUsersInfoNoti"
-                                               object:nil];
     
+    // 检查账号
+    ZJZKeeperBL *keeperBL = [[ZJZKeeperBL alloc] init];
+    ZJZKeeper *inputInfo = [[ZJZKeeper alloc] initWithAccount:[_account text] password:[_password text]];
+    
+    [keeperBL findKeeper:inputInfo];
 }
 
-- (void)checkUserAccount:(NSNotification*)noti {
-    NSArray *users = [noti object];
-    for (ZJZUserInfo *user in users) {
-        if ([user.account isEqualToString:[_account text]])
-        {
-            if ([user.password isEqualToString:[_password text]])
-            {
-                [self.view removeFromSuperview];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginNotification" object:[_account text]];
-                return;
-            }
-            else
-            {
-                break;
-            }
-        }
+- (void)checkkeeperAccount:(NSNotification*)noti {
+    NSArray *keepers = [noti object];
+    if (keepers.count == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"账号或密码错误"
+                                                            message:@"账号或密码错误"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil, nil];
+        [alertView show];
+
+        return;
     }
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"账号或密码错误"
-                                                        message:@"账号或密码错误"
-                                                       delegate:self
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil, nil];
-    [alertView show];
+
+    // 登陆成功，跳转，保存账号
+    ZJZKeeper *keeper = [[ZJZKeeper alloc] init];
+    keeper.account = _account.text;
+    keeper.password = _password.text;
+    [self savekeeperAccountWhenLogIn:keeper];
+    // 保存当前用户(看护人)
+    [GlobalVariables setCurrKeeper:keeper];
+    
+    [self.view removeFromSuperview];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginNotification" object:[_account text]];
+    
 }
 
 - (void) registerBtnClicked {
     
 }
 
+- (void)savekeeperAccountWhenLogIn:(ZJZKeeper *)keeper{
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    [archiver encodeObject:keeper forKey:kKeeperKey];
+    
+    [archiver finishEncoding];
+    NSLog(@"%@", [self getFilePath]);
+    [data writeToFile:[self getFilePath] atomically:YES];
+}
+
+- (NSString *)getFilePath {
+    NSArray *array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    return [array[0] stringByAppendingPathComponent:kFileName];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

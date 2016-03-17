@@ -13,7 +13,7 @@
     NSCalendar *gregorian = [[[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
     NSDateComponents *components = [gregorian components:NSYearCalendarUnit fromDate:self];
-    return [components year];
+    return (int)[components year];
 }
 
 
@@ -21,14 +21,14 @@
     NSCalendar *gregorian = [[[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
     NSDateComponents *components = [gregorian components:NSMonthCalendarUnit fromDate:self];
-    return [components month];
+    return (int)[components month];
 }
 
 -(int)day {
     NSCalendar *gregorian = [[[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
     NSDateComponents *components = [gregorian components:NSDayCalendarUnit fromDate:self];
-    return [components day];
+    return (int)[components day];
 }
 
 -(int)firstWeekDayInMonth {

@@ -1,24 +1,21 @@
 //
-//  MinstatusDAO.m
-//  CareElder
+//  ZJZOldManDAO.m
+//  ElderlyCare
 //
-//  Created by Jzzhou on 16/2/29.
+//  Created by Jzzhou on 16/3/17.
 //
 //
 
-#import "ZJZInfoDAO.h"
-
+#import "ZJZOldManDAO.h"
 #import "MKNetworkEngine.h"
 #import "MKNetworkOperation.h"
 
 #import "ZJZXMLParser.h"
 
-@implementation ZJZInfoDAO
+@implementation ZJZOldManDAO
 
-static ZJZInfoDAO *sharedManager = nil;
-
-+ (ZJZInfoDAO *)sharedManager
-{
+static ZJZOldManDAO *sharedManager = nil;
++ (ZJZOldManDAO *)sharedManager {
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         sharedManager = [[self alloc] init];
@@ -27,13 +24,13 @@ static ZJZInfoDAO *sharedManager = nil;
 }
 
 #pragma mark - 获得老人运动总统计量
-- (void)findAllSportStatistic:(NSString *)username
+- (void)findAllSportStatistic:(NSString *)name
 {
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
-    MKNetworkOperation *operation = [MKNetworkOperation new];
+    MKNetworkOperation *operation = [[MKNetworkOperation alloc] init];
     operation = [engine operationWithPath:@"selectAllSportStatistic" params:nil httpMethod:@"GET" ssl:NO];
     [operation onCompletion:^(MKNetworkOperation *completedOperation) {
-        ZJZXMLParser *parser = [ZJZXMLParser new];
+        ZJZXMLParser *parser = [[ZJZXMLParser alloc] init];
         NSArray *resArr = [parser parseChartType2String:[operation responseString]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"AllSportStatisticNoti" object:resArr];
     } onError:^(NSError *error) {
@@ -42,31 +39,16 @@ static ZJZInfoDAO *sharedManager = nil;
     [engine enqueueOperation:operation];
 }
 
-#pragma mark - 获得所有用户账户信息
-- (void)findAllUsers
-{
-    MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
-    MKNetworkOperation *operation = [MKNetworkOperation new];
-    operation = [engine operationWithPath:@"selectAllUser" params:nil httpMethod:@"GET" ssl:NO];
-    [operation onCompletion:^(MKNetworkOperation *completedOperation) {
-        ZJZXMLParser *parser = [ZJZXMLParser new];
-        NSArray *users = [parser parseUserInfo:[operation responseString]];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"AllUsersInfoNoti" object:users];
-    } onError:^(NSError *error) {
-        NSLog(@"%@", error);
-    }];
-    [engine enqueueOperation:operation];
-}
 
-#pragma mark - 获得用户数据源
-- (void)findUserInfo:(NSString *)username at:(NSString *)date withChartType:(NSInteger)type
+#pragma mark - 获得老人运动数据
+- (void)findOldManInfo:(NSString *)name at:(NSString *)date withChartType:(NSInteger)type
 {
-    NSString *writableFilePath = [self findUserFilePath:username at:date withChartType:type];
+    NSString *writableFilePath = [self findOldManFilePath:name at:date withChartType:type];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     // 如果文件已经存在，读取文件
     if ([fileManager fileExistsAtPath:writableFilePath]) {
-        ZJZXMLParser *parser = [ZJZXMLParser new];
+        ZJZXMLParser *parser = [[ZJZXMLParser alloc] init];
         NSArray *resArray = [parser parseFromXMLFilePath:writableFilePath withChartType:type];
         _listData = [[NSMutableArray alloc] initWithArray:resArray];
         
@@ -81,9 +63,9 @@ static ZJZInfoDAO *sharedManager = nil;
     
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
     
-    NSDictionary *params = @{@"date": date, @"user": username};
+    NSDictionary *params = @{@"date": date, @"user": name};
     
-    MKNetworkOperation *op = [MKNetworkOperation new];
+    MKNetworkOperation *op = [[MKNetworkOperation alloc] init];
     if (type == 1) {
         op = [engine operationWithPath:@"selectAllhourData" params:[params copy] httpMethod:@"GET" ssl:NO];
     } else if (type == 2) {
@@ -108,7 +90,7 @@ static ZJZInfoDAO *sharedManager = nil;
         
         [content writeToFile:writableFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
         // 按选择的图表type类型解析XML文件
-        ZJZXMLParser *parser = [ZJZXMLParser new];
+        ZJZXMLParser *parser = [[ZJZXMLParser alloc] init];
         NSArray *resArray = [parser parseFromXMLFilePath:writableFilePath withChartType:type];
         _listData = [[NSMutableArray alloc] initWithArray:resArray];
         
@@ -119,15 +101,15 @@ static ZJZInfoDAO *sharedManager = nil;
     }];
     
     [engine enqueueOperation:op];
-
+    
 }
 
 #pragma mark - 获得用户文件路径
-- (NSString *)findUserFilePath:(NSString *)username at:(NSString *)date withChartType:(NSInteger)type
+- (NSString *)findOldManFilePath:(NSString *)name at:(NSString *)date withChartType:(NSInteger)type
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *userDocumentPath = [documentPath stringByAppendingPathComponent:username];
+    NSString *userDocumentPath = [documentPath stringByAppendingPathComponent:name];
     // 如果没有文件夹，则为该用户创建文件夹
     [fileManager createDirectoryAtPath:userDocumentPath withIntermediateDirectories:YES attributes:nil error:nil];
     
@@ -139,9 +121,8 @@ static ZJZInfoDAO *sharedManager = nil;
     } else {
         NSAssert1(YES, @"MinStatusDAO.m - Type %ld is not right.", type);
     }
-
+    
     return writableFilePath;
 }
-
 
 @end

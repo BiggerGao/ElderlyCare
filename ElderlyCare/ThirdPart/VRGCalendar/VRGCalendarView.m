@@ -424,6 +424,9 @@
         
         NSString *weekdayValue = (NSString *)[chineseWeekdays objectAtIndex:i];
         UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:12];
+        
+//        [weekdayValue drawInRect:CGRectMake(i*(kVRGCalendarViewDayWidth+2), 40, kVRGCalendarViewDayWidth+2, 20) withAttributes:@{@"NSForegroundFont":font, @"NSLineBreakMode":NSLineBreakByClipping, @"UITextAlignment": NSTextAlignmentCenter}];
+        
         [weekdayValue drawInRect:CGRectMake(i*(kVRGCalendarViewDayWidth+2), 40, kVRGCalendarViewDayWidth+2, 20) withFont:font lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
     }
     

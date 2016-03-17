@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ZJZCenterViewController.h"
 
+#define kFileName @"Keeper"
+#define kKeeperKey @"KeeperAccount"
+
 @interface ZJZLoginViewController : UIViewController
 
 @end

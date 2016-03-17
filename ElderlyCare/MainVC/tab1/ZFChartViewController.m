@@ -66,7 +66,7 @@
     CGFloat height = SCREEN_HEIGHT - self.navigationController.navigationBar.bounds.size.height - self.tabBarController.tabBar.bounds.size.height;
     ZFBarChart *barChart = [[ZFBarChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, height)];
 
-    if([_theData count] == 0) {
+    if ([_theData count] == 0) {
         barChart.title = [NSString stringWithFormat:@"没有今天的运动数据."];
         [self.view addSubview:barChart];
         return;

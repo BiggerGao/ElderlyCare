@@ -9,7 +9,8 @@
 #import "ZJZChartTableViewController.h"
 
 #import "ZFChartViewController.h"
-#import "ZJZUserInfoBL.h"
+#import "ZJZKeeperBL.h"
+#import "ZJZOldManBL.h"
 
 @interface ZJZChartTableViewController ()
 
@@ -58,13 +59,13 @@
     ZFChartViewController *chartViewController = [[ZFChartViewController alloc] init];
     kChartType type = (kChartType)[indexPath row];
     
-    ZJZUserInfoBL *infoBL = [[ZJZUserInfoBL alloc] init];
+    ZJZOldManBL *oldManBL = [[ZJZOldManBL alloc] init];
     // 选择扇形图
     if(type == KChartTypePieChart)
     {
-        [infoBL getUserInfo:@"anna" at:_selectedTime withChartType:2];
+        [oldManBL getOldManInfo:@"anna" at:_selectedTime withChartType:2];
     } else { // 选择柱形或折线图
-        [infoBL getUserInfo:@"anna" at:_selectedTime withChartType:1];
+        [oldManBL getOldManInfo:@"anna" at:_selectedTime withChartType:1];
     }
     
     chartViewController.chartType = type;

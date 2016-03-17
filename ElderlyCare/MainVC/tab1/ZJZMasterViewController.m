@@ -8,7 +8,7 @@
 
 #import "ZJZMasterViewController.h"
 #import "ZJZChartTableViewController.h"
-#import "ZJZUserInfoBL.h"
+#import "ZJZKeeperBL.h"
 
 #define IOS6_LATER (floor(NSFoundationVersionNumber)>NSFoundationVersionNumber_iOS_6_1)
 

@@ -9,7 +9,8 @@
 #import "ZJZDaysInfoTableViewController.h"
 #import "ZJZDailyInfo.h"
 #import "ZFChartViewController.h"
-#import "ZJZUserInfoBL.h"
+#import "ZJZOldManBL.h"
+
 
 @interface ZJZDaysInfoTableViewController ()
 
@@ -78,11 +79,11 @@
 {
     ZFChartViewController *chartViewController = [[ZFChartViewController alloc] init];
     
-    ZJZUserInfoBL *infoBL = [[ZJZUserInfoBL alloc] init];
+    ZJZOldManBL *oldManBL = [[ZJZOldManBL alloc] init];
 
     NSString *date = _dateList[indexPath.row];
     // 选择扇形图
-    [infoBL getUserInfo:@"anna" at:date withChartType:2];
+    [oldManBL getOldManInfo:@"anna" at:date withChartType:2];
    
     chartViewController.chartType = 2;
     [self.navigationController pushViewController:chartViewController animated:YES];

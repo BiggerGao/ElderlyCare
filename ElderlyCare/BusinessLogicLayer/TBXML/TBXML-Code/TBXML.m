@@ -241,7 +241,7 @@
     if (error) *error = localError;
     
     // return success or error code
-    return localError == nil ? D_TBXML_SUCCESS : [localError code];
+    return localError == nil ? D_TBXML_SUCCESS : (int)[localError code];
 }
 
 @end
@@ -371,7 +371,7 @@
             if (attribute->value[0])
                 value = [NSString stringWithCString:&attribute->value[0] encoding:NSUTF8StringEncoding];
             else
-                value = [NSString stringWithString:@""];
+                value = @"";
             
 			break;
 		}
@@ -598,7 +598,7 @@
     
     if (error) *error = localError;
         
-    return localError == nil ? D_TBXML_SUCCESS : [localError code];
+    return localError == nil ? D_TBXML_SUCCESS : (int)[localError code];
 }
 
 - (void) decodeBytes {

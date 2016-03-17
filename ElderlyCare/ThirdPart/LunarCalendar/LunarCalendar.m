@@ -475,7 +475,7 @@ int LunarCalendarInfo[] = {
     NSDate* date = [formater dateFromString:dateStr];
     [formater release];
     NSDateComponents *components = [[NSCalendar currentCalendar] components: NSWeekdayCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:date];
-    int firstWeek=[components weekday]-1;
+    int firstWeek=(int)([components weekday]-1);
     int result=0;
     aDay=aDay+1;
     
