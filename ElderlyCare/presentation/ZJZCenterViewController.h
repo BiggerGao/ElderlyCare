@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZJZKeeper;
+
+@protocol ZJZCenterDelegate <NSObject>
+- (void)transferKeeperInfo:(ZJZKeeper *)keeper;
+@end
 
 @interface ZJZCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

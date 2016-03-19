@@ -31,7 +31,7 @@ static ZJZKeeperDAO *sharedManager = nil;
 {
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
     MKNetworkOperation *operation = [[MKNetworkOperation alloc] init];
-    operation = [engine operationWithPath:@"selectAllUser"
+    operation = [engine operationWithPath:@"selectKeeper"
                                    params:@{@"uname":inputKeeper.account, @"pwd":inputKeeper.password}
                                httpMethod:@"GET"
                                       ssl:NO];

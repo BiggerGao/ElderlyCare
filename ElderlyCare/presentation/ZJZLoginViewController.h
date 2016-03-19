@@ -12,6 +12,13 @@
 #define kFileName @"Keeper"
 #define kKeeperKey @"KeeperAccount"
 
+@protocol ZJZLoginDelegate <NSObject>
+
+
+@end
+
 @interface ZJZLoginViewController : UIViewController
+
+@property (nonatomic, weak) id<ZJZCenterDelegate> delegate;
 
 @end

@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="-569.5" y="1363.5"/>
         </scene>
-        <!--Container View Controller-->
+        <!--Center View Controller-->
         <scene sceneID="nIf-kI-29a">
             <objects>
-                <viewController id="tRe-HB-B9s" customClass="ZJZContainerViewController" sceneMemberID="viewController">
+                <viewController id="tRe-HB-B9s" customClass="ZJZCenterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DFx-Dw-sua"/>
                         <viewControllerLayoutGuide type="bottom" id="djP-kT-r9R"/>
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDy-yz-p9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.5" y="1371.5"/>
+            <point key="canvasLocation" x="-77.5" y="1363.5"/>
         </scene>
         <!--Days Info Table View Controller-->
         <scene sceneID="UCg-gJ-D51">
@@ -166,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="act-vK-qQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.5" y="1279.5"/>
+            <point key="canvasLocation" x="424.5" y="1363.5"/>
         </scene>
         <!--专家系统-->
         <scene sceneID="xad-km-zwg">

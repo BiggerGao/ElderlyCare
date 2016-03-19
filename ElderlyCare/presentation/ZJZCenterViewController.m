@@ -8,18 +8,20 @@
 
 #import "ZJZCenterViewController.h"
 #import "ZJZLoginViewController.h"
+#import "ZJZNavigationController.h"
+
 #import "ZJZCenterItem.h"
 #import "ZJZCenterSection.h"
+#import "ZJZKeeper.h"
 #import "ZJZKeeperBL.h"
 #import "ZJZOldManBL.h"
 #import "GlobalVariables.h"
 
 @interface ZJZCenterViewController ()
 
-@property (nonatomic, copy) NSString *username;
 @property (nonatomic, strong) NSMutableArray *groups;
 @property (nonatomic, getter=isLogIn) BOOL logIn;
-
+@property (nonatomic, strong) ZJZKeeper *keeper;
 @end
 
 @implementation ZJZCenterViewController
@@ -38,22 +40,29 @@
 
     self.title = @"个人中心";
 
-    [self initTableView];
+    [self addLoginViewController];
 }
+
+- (void)addLoginViewController {
+    ZJZLoginViewController *loginController = [[ZJZLoginViewController alloc] init];
+    ZJZNavigationController *navigationController = [[ZJZNavigationController alloc] initWithRootViewController:loginController];
+    loginController.delegate = self;
+    [self presentViewController:navigationController animated:NO completion:nil];
+}
+
 
 - (void)initTableView {
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    ZJZKeeper *keeper = [GlobalVariables currKeeper];
     
-    _username = keeper.account;
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    
     [self.view addSubview:_tableView];
     // 第一组
     ZJZCenterSection *section1 = [ZJZCenterSection initWithHeaderTitle:@"看护人" footerTitle:nil];
-    ZJZCenterItem *item1 = [ZJZCenterItem initWithTitle:_username];
+    ZJZCenterItem *item1 = [ZJZCenterItem initWithTitle:_keeper.nickName];
     item1.image = [UIImage imageNamed:@"me"];
     item1.height = 64;
     [section1 addItem:item1];
@@ -97,6 +106,12 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#pragma mark - 委托响应
+- (void)transferKeeperInfo:(ZJZKeeper *)keeper {
+    _keeper = keeper;
+    [self initTableView];
+}
+
 #pragma mark - tableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.groups.count;
@@ -129,6 +144,10 @@
         cell.accessoryType = item.type;
     } else {
         
+    }
+    
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        cell.userInteractionEnabled = NO;
     }
     
     return cell;

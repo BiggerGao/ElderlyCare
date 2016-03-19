@@ -25,9 +25,9 @@
         while (nodeElement) {
             ZJZKeeper *KeeperInfo = [[ZJZKeeper alloc] init];
             
-            KeeperInfo.account = [self parseKey:@"name" parentElement:nodeElement];
-            KeeperInfo.password = [self parseKey:@"pwd" parentElement:nodeElement];
-//            KeeperInfo.deviceID = [self parseKey:@"deviceID" parentElement:nodeElement];
+            KeeperInfo.keeperID = [self parseKey:@"keeperID" parentElement:nodeElement];
+            KeeperInfo.nickName = [self parseKey:@"nickName" parentElement:nodeElement];
+            KeeperInfo.tel = [self parseKey:@"tel" parentElement:nodeElement];
             
             [resArray addObject:KeeperInfo];
             nodeElement = [TBXML nextSiblingNamed:@"user" searchFromElement:nodeElement];

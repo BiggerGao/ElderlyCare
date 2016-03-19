@@ -9,10 +9,13 @@
 #import "ZJZRegisterViewController.h"
 #import "ZJZLoginViewController.h"
 #import "ZJZTextFieldBackground.h"
+#import <MBProgressHUD.h>
+
 #import "ZJZKeeperBL.h"
 #import "ZJZKeeper.h"
 #import "ZFConst.h"
 #import "GlobalVariables.h"
+
 
 @interface ZJZLoginViewController ()
 
@@ -26,17 +29,10 @@
 
 @implementation ZJZLoginViewController
 
--(void)viewWillAppear:(BOOL)animated
-{
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:216/255.0f green:209/255.0f blue:192/255.0f alpha:1]];
-//    self.navigationController.navigationBarHidden = YES;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
-    self.title = @"请登录";
+    self.navigationItem.title = @"请登陆";
     
     _background = [[ZJZTextFieldBackground alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width-40, 100)];
     [_background setBackgroundColor:ZFColor(245, 245, 245, 1)];
@@ -95,8 +91,7 @@
 }
 
 - (void)registerBtnClicked {
-    [self.navigationController pushViewController:[[ZJZRegisterViewController alloc] init]
-                                         animated:YES];
+    [self.navigationController pushViewController:[[ZJZRegisterViewController alloc] init] animated:YES];
 }
 
 - (void)loginBtnClicked {
@@ -115,6 +110,8 @@
     ZJZKeeperBL *keeperBL = [[ZJZKeeperBL alloc] init];
     ZJZKeeper *inputInfo = [[ZJZKeeper alloc] initWithAccount:[_account text] password:[_password text]];
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [keeperBL findKeeper:inputInfo];
 }
 
@@ -130,16 +127,22 @@
 
         return;
     }
+    // 保存当前用户(看护人)
 
+    
     // 登陆成功，跳转，保存账号
     ZJZKeeper *keeper = [[ZJZKeeper alloc] init];
     keeper.account = _account.text;
     keeper.password = _password.text;
     [self savekeeperAccountWhenLogIn:keeper];
-    // 保存当前用户(看护人)
+    
+    keeper = keepers[0];
     [GlobalVariables setCurrKeeper:keeper];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginNotification" object:keeper];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    
+    [self.delegate transferKeeperInfo:keeper];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - 保存用户账号
@@ -159,10 +162,8 @@
     return [array[0] stringByAppendingPathComponent:kFileName];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -10,16 +10,19 @@
 
 @interface ZJZKeeper : NSObject <NSCoding, NSCopying>
 
-/** 看护人ID */
-//@property (nonatomic, copy) NSString *keeperID;
+// 请求参数
 /** 账号 */
 @property (nonatomic, copy) NSString *account;
 /** 密码 */
 @property (nonatomic, copy) NSString *password;
+
+// 返回值
+/** 看护人ID */
+@property (nonatomic, copy) NSString *keeperID;
 /** 昵称 */
-//@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *nickName;
 /** 电话号码 */
-//@property (nonatomic, copy) NSString *telphone;
+@property (nonatomic, copy) NSString *tel;
 
 - (instancetype)initWithAccount:(NSString *)account password:(NSString *)password;
 
