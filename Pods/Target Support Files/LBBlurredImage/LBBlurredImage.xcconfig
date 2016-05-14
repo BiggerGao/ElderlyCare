@@ -1,0 +1,1 @@
+LBBLURREDIMAGE_OTHER_LDFLAGS = -framework "Accelerate" -framework "CoreGraphics" -framework "UIKit"

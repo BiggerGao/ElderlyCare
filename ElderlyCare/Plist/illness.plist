@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   illness.plist
+   ElderlyCare
+
+   Created by Jzzhou on 16/3/28.
+   Copyright (c) 2016年 __MyCompanyName__. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>无</string>
+        <string>糖尿病</string>
+        <string>高血压</string>
+        <string>高血脂</string>
+        <string>心脏病</string>
+    </array>
+</plist>

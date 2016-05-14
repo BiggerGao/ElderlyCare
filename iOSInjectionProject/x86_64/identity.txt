@@ -1,0 +1,2 @@
+/Users/Echo/Library/Developer/Xcode/DerivedData/ElderlyCare-aowzpquseudpkfenixtnspmdznrq/Build/Products/Debug-iphonesimulator/ElderlyCare.app
+iPhone Developer

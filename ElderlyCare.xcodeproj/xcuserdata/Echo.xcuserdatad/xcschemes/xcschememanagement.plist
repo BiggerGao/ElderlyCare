@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Calendar.xcscheme</key>
+		<key>ElderlyCare.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7DD102B2195812850017EB4C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7DD102CD195812860017EB4C</key>
+		<key>5FAE74ED1CB543E300853C31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

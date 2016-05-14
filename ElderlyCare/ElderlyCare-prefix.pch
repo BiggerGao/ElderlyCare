@@ -1,0 +1,28 @@
+//
+//  ElderlyCare-prefix.pch
+//  ElderlyCare
+//
+//  Created by Jzzhou on 16/4/6.
+//  Copyright © 2016年 Jzzhou. All rights reserved.
+//
+
+#ifndef ElderlyCare_prefix_pch
+#define ElderlyCare_prefix_pch
+
+
+#endif /* ElderlyCare_prefix_pch */
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "MKNetworkKit.h"
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+#endif
