@@ -191,9 +191,6 @@ static NSString *const CellAddIdentifier = @"CellAddIdentifier";
     }
     [self.groups addObject:section3];
     
-//    UIEdgeInsets contentInset = _tableView.contentInset;
-//    contentInset.top = 20;
-//    [self.tableView setContentInset:contentInset];
     [self.tableView reloadData];
 }
 

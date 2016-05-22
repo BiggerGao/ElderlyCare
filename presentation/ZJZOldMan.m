@@ -24,6 +24,8 @@
     copy.illness = [self.illness copyWithZone:zone];
     copy.deviceID = [self.deviceID copyWithZone:zone];
     copy.emergencyTel = [self.emergencyTel copyWithZone:zone];
+    copy.city = [self.city copyWithZone:zone];
+    copy.remark = [self.remark copyWithZone:zone];
     return copy;
 }
 

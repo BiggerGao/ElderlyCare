@@ -24,12 +24,15 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, assign) CGFloat screenHeight;
 @property (nonatomic, strong) NSArray *titleArray;
+@property (nonatomic, assign) JZZWeatherType type;
+
 @end
 
 @implementation JZZWeatherController
 
-- (instancetype)init {
+- (instancetype)initWithType:(JZZWeatherType)type {
     if (self = [super init]) {
+        _type = type;
     }
     return self;
 }
@@ -68,13 +71,6 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
     self.tableView.pagingEnabled = YES;
     [self.view addSubview:self.tableView];
     
-    self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [[JZZManager sharedManager] findCurrentLocation];
-        [self.tableView.mj_header endRefreshing];
-    }];
-
-    [self.tableView.mj_header beginRefreshing];
     
     // 初始化UI
     
@@ -172,14 +168,24 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
      subscribeNext:^(JZZLifeCondition *newCondition) {
          [self.tableView reloadData];
      }];
-    
-    [[JZZManager sharedManager] findCurrentLocation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+    
+    if (_type == JZZWeatherTypeOldMan) {
+        [[JZZManager sharedManager] findOldManCurrentLocation];
+    } else {
+        [[JZZManager sharedManager] findCurrentLocation];
+    }
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)viewDidLoad {
@@ -265,13 +271,6 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
 }
 
 - (UITableViewCell *)configureLifeCellAtIndexPath:(NSIndexPath *)indexPath life:(JZZLifeCondition *)life {
-//    JZZLifeCellTableViewCell *lifeCell = [self.tableView dequeueReusableCellWithIdentifier:LifeCellIdentifier];
-//    NSArray *lifeArray = [JZZManager sharedManager].lifeArray;
-//    lifeCell.catagoryImgeView.image = [UIImage imageNamed:[JZZManager sharedManager].imageArray[indexPath.row - 1]];
-//    lifeCell.catagoryTitle.text = self.titleArray[indexPath.row - 1];
-//    lifeCell.roughDescription.text = lifeArray[indexPath.row - 1][0];
-//    lifeCell.describeTextView.text = lifeArray[indexPath.row - 1][1];
-    
     UITableViewCell *lifeCell = [self.tableView dequeueReusableCellWithIdentifier:LifeCellIdentifier];
     if (! lifeCell) {
         lifeCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:LifeCellIdentifier];

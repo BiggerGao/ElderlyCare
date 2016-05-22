@@ -58,6 +58,8 @@
             oldmanInfo.illness = [self parseKey:@"illness" parentElement:nodeElement];
             oldmanInfo.deviceID = [self parseKey:@"deviceID" parentElement:nodeElement];
             oldmanInfo.emergencyTel = [self parseKey:@"emergencyTel" parentElement:nodeElement];
+            oldmanInfo.city = [self parseKey:@"city" parentElement:nodeElement];
+            oldmanInfo.remark = [self parseKey:@"remark" parentElement:nodeElement];
             [resArray addObject:oldmanInfo];
             nodeElement = [TBXML nextSiblingNamed:@"OldMan" searchFromElement:nodeElement];
         }

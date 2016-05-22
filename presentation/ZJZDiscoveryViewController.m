@@ -8,7 +8,7 @@
 
 #import "ZJZDiscoveryViewController.h"
 #import "Color-Tool.h"
-#import "JZZWeatherController.h"
+#import "ZJZChooseWeatherController.h"
 
 @interface ZJZDiscoveryViewController ()
 @property (nonatomic, strong) UIScrollView* scrollView;
@@ -16,10 +16,6 @@
 @end
 
 @implementation ZJZDiscoveryViewController
-
-- (void)injected {
-    [self generateContent];
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = NO;
@@ -53,7 +49,7 @@
     [self injected];
 }
 
-- (void)generateContent {
+- (void)injected {
     
     UIView *superView = _contentView;
     UIView *lastView = nil;
@@ -145,8 +141,9 @@
 }
 
 - (void)pushToWeather:(UITapGestureRecognizer*)gestureRecognizer {
-    JZZWeatherController *weatherController = [[JZZWeatherController alloc] init];
-    [self.navigationController pushViewController:weatherController animated:YES];
+    
+    ZJZChooseWeatherController *chooseController = [[ZJZChooseWeatherController alloc] init];
+    [self.navigationController pushViewController:chooseController animated:YES];
 }
 
 - (UIRectEdge)edgesForExtendedLayout {

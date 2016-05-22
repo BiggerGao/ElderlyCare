@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5F2393391CD625F7007466BA /* ZJZOldManProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2393381CD625F7007466BA /* ZJZOldManProfileViewController.m */; };
+		5F31CF641CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CF631CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m */; };
+		5F31CF6A1CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CF691CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m */; };
+		5F31CF6D1CF161AE00336EAC /* ZJZChooseWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CF6C1CF161AE00336EAC /* ZJZChooseWeatherController.m */; };
 		5F4D860D1CB5568D00CDC250 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAE77191CB551C800853C31 /* CFNetwork.framework */; };
 		5F4D860F1CB556B200CDC250 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4D860E1CB556B200CDC250 /* ImageIO.framework */; };
-		5F791B841CD3071C0006F41B /* ZJZOldManDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F791B831CD3071C0006F41B /* ZJZOldManDetailViewController.m */; };
-		5F791B881CD3091D0006F41B /* ZJZOldManFamilyBindingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F791B871CD3091D0006F41B /* ZJZOldManFamilyBindingView.m */; };
-		5F791B8B1CD3092A0006F41B /* ZJZOldManCityBindingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F791B8A1CD3092A0006F41B /* ZJZOldManCityBindingView.m */; };
 		5FAE74F31CB543E300853C31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE74F21CB543E300853C31 /* main.m */; };
 		5FAE74F61CB543E300853C31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE74F51CB543E300853C31 /* AppDelegate.m */; };
 		5FAE74FE1CB543E300853C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAE74FD1CB543E300853C31 /* Assets.xcassets */; };
@@ -117,14 +117,14 @@
 		301EBC00A9A4FD69458414DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5F2393371CD625F7007466BA /* ZJZOldManProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManProfileViewController.h; sourceTree = "<group>"; };
 		5F2393381CD625F7007466BA /* ZJZOldManProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManProfileViewController.m; sourceTree = "<group>"; };
+		5F31CF621CF0B1C300336EAC /* ZJZOldManCityBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManCityBindingViewController.h; sourceTree = "<group>"; };
+		5F31CF631CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManCityBindingViewController.m; sourceTree = "<group>"; };
+		5F31CF681CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManFamilierBindingViewController.h; sourceTree = "<group>"; };
+		5F31CF691CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManFamilierBindingViewController.m; sourceTree = "<group>"; };
+		5F31CF6B1CF161AE00336EAC /* ZJZChooseWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZChooseWeatherController.h; sourceTree = "<group>"; };
+		5F31CF6C1CF161AE00336EAC /* ZJZChooseWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZChooseWeatherController.m; sourceTree = "<group>"; };
 		5F4D860E1CB556B200CDC250 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		5F62E9591CB553DF00B5A6F8 /* ElderlyCare-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ElderlyCare-prefix.pch"; sourceTree = "<group>"; };
-		5F791B821CD3071C0006F41B /* ZJZOldManDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManDetailViewController.h; sourceTree = "<group>"; };
-		5F791B831CD3071C0006F41B /* ZJZOldManDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManDetailViewController.m; sourceTree = "<group>"; };
-		5F791B861CD3091D0006F41B /* ZJZOldManFamilyBindingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManFamilyBindingView.h; sourceTree = "<group>"; };
-		5F791B871CD3091D0006F41B /* ZJZOldManFamilyBindingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManFamilyBindingView.m; sourceTree = "<group>"; };
-		5F791B891CD3092A0006F41B /* ZJZOldManCityBindingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManCityBindingView.h; sourceTree = "<group>"; };
-		5F791B8A1CD3092A0006F41B /* ZJZOldManCityBindingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManCityBindingView.m; sourceTree = "<group>"; };
 		5FAE74EE1CB543E300853C31 /* ElderlyCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElderlyCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAE74F21CB543E300853C31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FAE74F41CB543E300853C31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -340,29 +340,20 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
-		5F791B811CD306740006F41B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5F791B861CD3091D0006F41B /* ZJZOldManFamilyBindingView.h */,
-				5F791B871CD3091D0006F41B /* ZJZOldManFamilyBindingView.m */,
-				5F791B891CD3092A0006F41B /* ZJZOldManCityBindingView.h */,
-				5F791B8A1CD3092A0006F41B /* ZJZOldManCityBindingView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		5F791B851CD3084B0006F41B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5FAE76E31CB54D1C00853C31 /* AddOldMan */,
-				5FAE760A1CB546CA00853C31 /* ZJZDaysInfoTableViewController.h */,
-				5FAE760B1CB546CA00853C31 /* ZJZDaysInfoTableViewController.m */,
 				5FAE761D1CB546CA00853C31 /* ZJZOldManListViewController.h */,
 				5FAE761E1CB546CA00853C31 /* ZJZOldManListViewController.m */,
-				5F791B821CD3071C0006F41B /* ZJZOldManDetailViewController.h */,
-				5F791B831CD3071C0006F41B /* ZJZOldManDetailViewController.m */,
+				5F31CF681CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.h */,
+				5F31CF691CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m */,
+				5F31CF621CF0B1C300336EAC /* ZJZOldManCityBindingViewController.h */,
+				5F31CF631CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m */,
 				5F2393371CD625F7007466BA /* ZJZOldManProfileViewController.h */,
 				5F2393381CD625F7007466BA /* ZJZOldManProfileViewController.m */,
+				5FAE760A1CB546CA00853C31 /* ZJZDaysInfoTableViewController.h */,
+				5FAE760B1CB546CA00853C31 /* ZJZDaysInfoTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -723,7 +714,7 @@
 			children = (
 				5FAE760E1CB546CA00853C31 /* ZJZDiscoveryViewController.h */,
 				5FAE760F1CB546CA00853C31 /* ZJZDiscoveryViewController.m */,
-				5FB72A1E1CE71E6600A45F59 /* 天气预报 */,
+				5FB72A1E1CE71E6600A45F59 /* 老人天气预报 */,
 			);
 			name = "发现";
 			sourceTree = "<group>";
@@ -770,7 +761,6 @@
 			isa = PBXGroup;
 			children = (
 				5F791B851CD3084B0006F41B /* Controller */,
-				5F791B811CD306740006F41B /* Views */,
 			);
 			name = OldMan;
 			sourceTree = "<group>";
@@ -822,14 +812,16 @@
 			path = "TBXML-Headers";
 			sourceTree = "<group>";
 		};
-		5FB72A1E1CE71E6600A45F59 /* 天气预报 */ = {
+		5FB72A1E1CE71E6600A45F59 /* 老人天气预报 */ = {
 			isa = PBXGroup;
 			children = (
+				5F31CF6B1CF161AE00336EAC /* ZJZChooseWeatherController.h */,
+				5F31CF6C1CF161AE00336EAC /* ZJZChooseWeatherController.m */,
 				5FB72A211CE71E7E00A45F59 /* ViewModel */,
 				5FB72A201CE71E7800A45F59 /* View */,
 				5FB72A1F1CE71E7100A45F59 /* Model */,
 			);
-			name = "天气预报";
+			name = "老人天气预报";
 			sourceTree = "<group>";
 		};
 		5FB72A1F1CE71E7100A45F59 /* Model */ = {
@@ -1028,7 +1020,6 @@
 				5FAE76891CB546CA00853C31 /* ZJZKeeperDAO.m in Sources */,
 				5FAE76961CB546CA00853C31 /* ZJZLoginViewController.m in Sources */,
 				5FAE76C81CB5472100853C31 /* GlobalVariablesManager.m in Sources */,
-				5F791B8B1CD3092A0006F41B /* ZJZOldManCityBindingView.m in Sources */,
 				5FAE769A1CB546CA00853C31 /* ZJZOldManDAO.m in Sources */,
 				5FAE74F61CB543E300853C31 /* AppDelegate.m in Sources */,
 				5FAE76FB1CB5505900853C31 /* ZJZKeeper.m in Sources */,
@@ -1048,17 +1039,16 @@
 				5FAE76B01CB546CA00853C31 /* MKNetworkOperation.m in Sources */,
 				5FAE76841CB546CA00853C31 /* ZJZChartTableViewController.m in Sources */,
 				5FAE76BD1CB546CA00853C31 /* ZFAxisLine.m in Sources */,
-				5F791B881CD3091D0006F41B /* ZJZOldManFamilyBindingView.m in Sources */,
 				5FAE76A71CB546CA00853C31 /* FMResultSet.m in Sources */,
 				5FAE76FA1CB5505900853C31 /* ZJZHourInfo.m in Sources */,
 				5FAE76A61CB546CA00853C31 /* FMDatabaseQueue.m in Sources */,
-				5F791B841CD3071C0006F41B /* ZJZOldManDetailViewController.m in Sources */,
 				5FAE76BA1CB546CA00853C31 /* ZFConst.m in Sources */,
 				5FAE76951CB546CA00853C31 /* ZJZKeeperViewController.m in Sources */,
 				5FAE76AB1CB546CA00853C31 /* NSDate+RFC1123.m in Sources */,
 				5FAE76B91CB546CA00853C31 /* UIView+Zirkfied.m in Sources */,
 				5FAE74F31CB543E300853C31 /* main.m in Sources */,
 				5FAE76BC1CB546CA00853C31 /* ZFBarChart.m in Sources */,
+				5F31CF641CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m in Sources */,
 				5FB72A341CE71E9D00A45F59 /* JZZWeatherController.m in Sources */,
 				5FAE76BF1CB546CA00853C31 /* ZFLabel.m in Sources */,
 				5FB72A3A1CE71E9D00A45F59 /* JZZManager.m in Sources */,
@@ -1084,6 +1074,8 @@
 				5FB72A351CE71E9D00A45F59 /* JZZForecast.m in Sources */,
 				5FAE76B81CB546CA00853C31 /* UIColor+Zirkfied.m in Sources */,
 				5FAE770A1CB5506B00853C31 /* ZJZXMLParser.m in Sources */,
+				5F31CF6D1CF161AE00336EAC /* ZJZChooseWeatherController.m in Sources */,
+				5F31CF6A1CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m in Sources */,
 				5FB72A361CE71E9D00A45F59 /* JZZForecastDetailController.m in Sources */,
 				5FAE769B1CB546CA00853C31 /* ZJZOldManListViewController.m in Sources */,
 				5FAE76831CB546CA00853C31 /* ZFChartViewController.m in Sources */,

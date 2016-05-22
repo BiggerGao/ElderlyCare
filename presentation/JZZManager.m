@@ -10,6 +10,7 @@
 #import "JZZClient.h"
 
 #import <TSMessages/TSMessage.h>
+#import "GlobalVariablesManager.h"
 
 @interface JZZManager () <CLLocationManagerDelegate>
 
@@ -27,6 +28,7 @@
 @end
 
 @implementation JZZManager
+
 
 + (instancetype)sharedManager {
     static JZZManager *_sharedManager = nil;
@@ -86,6 +88,17 @@
         [self.locationManager requestAlwaysAuthorization];
         [self.locationManager startUpdatingLocation];
     }
+}
+
+- (void)findOldManCurrentLocation {
+    NSString *city = [GlobalVariablesManager sharedManager].currOldMan.city;
+    if (!city) {
+        [TSMessage showNotificationWithTitle:@"未选择老人"
+                                    subtitle:@"请您先选择要出行的老人."
+                                        type:TSMessageNotificationTypeError];
+        return;
+    }
+    self.currentLocation = city;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations

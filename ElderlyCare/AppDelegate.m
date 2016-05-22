@@ -21,12 +21,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // 推送注册
-    if (![application isRegisteredForRemoteNotifications]) {
+//    if (![application isRegisteredForRemoteNotifications]) {
         UIUserNotificationSettings *uns = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound) categories:nil];
         [application registerUserNotificationSettings:uns];
         //注册远程通知
         [application registerForRemoteNotifications];
-    }
+//    }
     
     // 注册SMSSDK
     [SMSSDK registerApp:appkey withSecret:app_secrect];

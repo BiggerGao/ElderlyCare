@@ -51,6 +51,7 @@
     [self generateContent];
 
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -84,7 +85,7 @@
         UIView *view = [[UIView alloc] init];
         view.backgroundColor = ZJZColor(240, 240, 240, 1);
         view.layer.cornerRadius = 5.0f;
-        view.layer.borderWidth = 2.5f;
+        view.layer.borderWidth = 1.0f;
         view.layer.borderColor = [ZJZColor(220, 220, 220, 1) CGColor];
         view;
     });
@@ -292,83 +293,6 @@
         make.left.equalTo(illnessLabel1.mas_right).offset(20);
         make.width.equalTo(@240);
     }];
-
-    /// 亲属联系方式
-    UIView *relationView = ({
-        UIView *view = [[UIView alloc] init];
-        view.backgroundColor = ZJZColor(240, 240, 240, 1);
-        view.layer.cornerRadius = 5.0f;
-        view.layer.borderWidth = 1.0f;
-        view.layer.borderColor = [ZJZColor(220, 220, 220, 1) CGColor];
-        view;
-    });
-    [_contentView addSubview:relationView];
-    
-    [relationView mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *superView = _contentView;
-        make.top.equalTo(deviceView.mas_bottom).offset(10);
-        make.left.equalTo(superView.mas_left).offset(10);
-        make.right.equalTo(superView.mas_right).offset(-10);
-        make.height.equalTo(@100);
-    }];
-    // 关系
-    UILabel *relationLabel1 = [self createLabelWithText:@"老人亲属" textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
-    relationLabel1.textColor = [UIColor blackColor];
-    [relationView addSubview:relationLabel1];
-    UILabel *relationLabel2 = [self createLabelWithText:_oldMan.relationship textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
-    relationLabel2.textColor = ZJZColor(150, 150, 150, 1);
-    [relationView addSubview:relationLabel2];
-    
-    
-    [relationLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *superView = relationView;
-        make.top.equalTo(superView.mas_top).offset(10);
-        make.left.equalTo(superView.mas_left).offset(10);
-        make.width.equalTo(@80);
-    }];
-    
-    [relationLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *superView = relationView;
-        make.top.equalTo(superView.mas_top).offset(10);
-        make.left.equalTo(relationLabel1.mas_right).offset(20);
-        make.width.equalTo(@140);
-    }];
-    
-    // 联系电话
-    UILabel *telLabel1 = [self createLabelWithText:@"联系方式" textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
-    telLabel1.textColor = [UIColor blackColor];
-    [relationView addSubview:telLabel1];
-    UILabel *telLabel2 = [self createLabelWithText:_oldMan.emergencyTel textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
-    telLabel2.textColor = ZJZColor(150, 150, 150, 1);
-    [relationView addSubview:telLabel2];
-    
-    UIImage *telImage = [UIImage imageNamed:@"telephone"];
-    
-    UIImageView *telImageView = [[UIImageView alloc] initWithImage:telImage];
-    telImageView.userInteractionEnabled = YES;
-    [telImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showTelNumber:)]];
-    [relationView addSubview:telImageView];
-    [self.view addSubview:telImageView];
-    
-    [telLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *superView = relationView;
-        make.top.equalTo(superView.mas_top).offset(60);
-        make.left.equalTo(superView.mas_left).offset(10);
-        make.width.equalTo(@80);
-    }];
-    [telLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *superView = relationView;
-        make.top.equalTo(superView.mas_top).offset(60);
-        make.left.equalTo(telLabel1.mas_right).offset(20);
-        make.width.equalTo(@140);
-    }];
-    [telImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *superView = relationView;
-        make.top.equalTo(superView.mas_top).offset(60);
-        make.right.equalTo(superView.mas_right).offset(-10);
-        make.width.equalTo(@20);
-        make.height.equalTo(@20);
-    }];
     
     /// bodyView
     UIView *bodyView = ({
@@ -383,7 +307,7 @@
     
     [bodyView mas_makeConstraints:^(MASConstraintMaker *make) {
         UIView *superView = _contentView;
-        make.top.equalTo(relationView.mas_bottom).offset(10);
+        make.top.equalTo(deviceView.mas_bottom).offset(10);
         make.left.equalTo(superView.mas_left).offset(10);
         make.right.equalTo(superView.mas_right).offset(-10);
         make.height.equalTo(@150);
@@ -495,10 +419,12 @@
     
     _textView = [[UITextView alloc] init];
     _textView.delegate = self;
-    _textView.font = [UIFont systemFontOfSize:16];
+    _textView.font = [UIFont systemFontOfSize:20];
     _textView.backgroundColor = ZJZColor(240, 240, 240, 1);
+    _textView.textColor = ZJZColor(150, 150, 150, 1);
     _textView.contentInset = UIEdgeInsetsMake(-11, -6, 0, 0);
     _textView.scrollEnabled = NO;
+    _textView.text = _oldMan.remark;
     
     [remarksView addSubview:_textView];
     [remarksLeft mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -510,7 +436,7 @@
     
     [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
         UIView *superView = remarksView;
-        make.top.equalTo(superView.mas_top).offset(10);
+        make.top.equalTo(superView.mas_top).offset(12);
         make.bottom.equalTo(superView.mas_bottom).offset(-10);
         make.left.equalTo(remarksLeft.mas_right).offset(20);
         make.right.equalTo(superView.mas_right).offset(-10);

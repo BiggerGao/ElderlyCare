@@ -18,6 +18,10 @@
 
 @implementation ZJZDaysInfoTableViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

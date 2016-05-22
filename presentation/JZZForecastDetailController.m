@@ -33,23 +33,26 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = NO;
+//    self.navigationController.navigationBarHidden = NO;
     _keys = [_infoDict allKeys];
 }
 
 - (void)injected {
-    _tableView = [[UITableView alloc] init];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorColor = [UIColor colorWithWhite:100 alpha:0.2];
+    _tableView.tableFooterView = [[UIView alloc] init];
+    
     [self.view addSubview:_tableView];
 }
 
 - (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    CGRect bounds = self.view.bounds;
+    CGRect bounds = [self.view bounds];
     self.tableView.frame = bounds;
+    self.blurredImageView.frame = bounds;
+    self.backgroundImageView.frame = bounds;
 }
 
 - (void)viewDidLoad {

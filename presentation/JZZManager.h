@@ -24,5 +24,5 @@
 + (instancetype)sharedManager;
 
 - (void)findCurrentLocation;
-
+- (void)findOldManCurrentLocation;
 @end

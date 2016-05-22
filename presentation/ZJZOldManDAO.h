@@ -23,6 +23,7 @@
 @property (nonatomic, copy) NSArray *listData;
 @property (nonatomic, weak) id<ZJZCenterOldManDelegate> oldManCenterDelegate;
 @property (nonatomic, weak) id<ZJZDaysDelegate> oldManDaysDelegate;
+
 // 获得老人列表
 - (void)findOldManList:(ZJZKeeper *)keeper;
 

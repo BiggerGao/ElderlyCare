@@ -32,5 +32,13 @@
 @property (nonatomic, copy) NSString *deviceID;
 /** 亲属电话*/
 @property (nonatomic, copy) NSString *emergencyTel;
+/**
+ *  city
+ */
+@property (nonatomic, copy) NSString *city;
+/**
+ *  备注
+ */
+@property (nonatomic, copy) NSString *remark;
 
 @end
