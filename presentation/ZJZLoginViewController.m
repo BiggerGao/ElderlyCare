@@ -324,8 +324,5 @@
     return [array[0] stringByAppendingPathComponent:kFileName];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    
-}
 
 @end

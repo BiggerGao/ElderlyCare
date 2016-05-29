@@ -103,6 +103,7 @@ static NSString *const CellAddIdentifier = @"CellAddIdentifier";
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 
@@ -332,6 +333,7 @@ static NSString *const CellAddIdentifier = @"CellAddIdentifier";
         if (indexPath.row == 1) {
             cell.userInteractionEnabled = NO;
         }
+        
         return cell;
     }
     
@@ -380,6 +382,7 @@ static NSString *const CellAddIdentifier = @"CellAddIdentifier";
         }
         
     }
+    
     // oldman section
     BOOL b_addCell = (indexPath.row == section.items.count);
     
@@ -441,10 +444,15 @@ static NSString *const CellAddIdentifier = @"CellAddIdentifier";
     }
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ZJZOldManListViewController *oldManInfoVC = [storyboard instantiateViewControllerWithIdentifier:@"ZJZOldMan"];
-    ZJZOldMan *oldMan = [[ZJZOldMan alloc] init];
+    ZJZOldMan *oldMan = nil;
     if (indexPath.section == 1 && indexPath.row == 0) {
         oldMan = _primaryOldMan;
-    } else {
+    }
+    else {
+        if (indexPath.row > _oldManArray.count-1) {
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            return;
+        }
         oldMan = _oldManArray[indexPath.row];
     }
 

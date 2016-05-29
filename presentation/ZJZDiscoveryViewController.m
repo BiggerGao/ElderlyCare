@@ -9,6 +9,7 @@
 #import "ZJZDiscoveryViewController.h"
 #import "Color-Tool.h"
 #import "ZJZChooseWeatherController.h"
+#import "JZZRootController.h"
 
 @interface ZJZDiscoveryViewController ()
 @property (nonatomic, strong) UIScrollView* scrollView;
@@ -81,11 +82,12 @@
         view.layer.borderWidth = 1.0f;
         view.layer.borderColor = [ZJZColor(220, 220, 220, 1) CGColor];
         view.layer.masksToBounds = YES;
+        view.userInteractionEnabled = YES;
+        [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToWeather:)]];
         view;
     });
     [_contentView addSubview:weatherView];
-    weatherView.userInteractionEnabled = YES;
-    [weatherView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToWeather:)]];
+    
     [weatherView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(lastView.mas_bottom).offset(15);
         make.left.equalTo(superView.mas_left).offset(10);
@@ -95,25 +97,27 @@
     
     lastView = weatherView;
 
-    // 看护文章推荐系统
-    UIImageView *articleView = ({
+    // 智能推荐系统
+    UIImageView *diseaseView = ({
         UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"view_article"]];
         view.layer.masksToBounds = YES;
         view.backgroundColor = [UIColor greenColor];
         view.layer.cornerRadius = 8.0f;
         view.layer.borderWidth = 1.0f;
         view.layer.borderColor = [ZJZColor(220, 220, 220, 1) CGColor];
+        view.userInteractionEnabled = YES;
+        [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDisease:)]];
         view;
     });
-    [_contentView addSubview:articleView];
+    [_contentView addSubview:diseaseView];
     
-    [articleView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [diseaseView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(lastView.mas_bottom).offset(15);
         make.left.equalTo(superView.mas_left).offset(10);
         make.right.equalTo(superView.mas_right).offset(-10);
         make.height.equalTo(expertView.height);
     }];
-    lastView = articleView;
+    lastView = diseaseView;
     
     // 敬请期待
     UIImageView *waitingView = ({
@@ -144,6 +148,12 @@
     
     ZJZChooseWeatherController *chooseController = [[ZJZChooseWeatherController alloc] init];
     [self.navigationController pushViewController:chooseController animated:YES];
+}
+
+- (void)pushToDisease:(UITapGestureRecognizer*)gestureRecognizer {
+    
+    JZZRootController *diseaseController = [[JZZRootController alloc] init];
+    [self.navigationController pushViewController:diseaseController animated:YES];
 }
 
 - (UIRectEdge)edgesForExtendedLayout {

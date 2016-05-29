@@ -196,7 +196,7 @@
 				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = ("x86_64/injecting_class.o", "-L'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain'/usr/lib/swift/iphonesimulator", "-F'/Users/Echo/Library/Developer/Xcode/DerivedData/ElderlyCare-exulrmyaifmbpogobkujnemsbgfv/Build'/Products/Debug-iphonesimulator", "-undefined",
+				OTHER_LDFLAGS = ("", "-undefined",
 					dynamic_lookup,
 				);
 				SDKROOT = iphoneos;
@@ -225,7 +225,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = ("x86_64/injecting_class.o", "-L'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain'/usr/lib/swift/iphonesimulator", "-F'/Users/Echo/Library/Developer/Xcode/DerivedData/ElderlyCare-exulrmyaifmbpogobkujnemsbgfv/Build'/Products/Debug-iphonesimulator", "-undefined",
+				OTHER_LDFLAGS = ("", "-undefined",
 					dynamic_lookup,
 				);
 				SDKROOT = iphoneos;

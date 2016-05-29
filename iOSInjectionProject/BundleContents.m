@@ -45,5 +45,7 @@ int injectionHook() {
     return YES;
 }
 
+#import "/Users/Echo/iOS/我的iOS代码/ElderlyCare/presentation/JZZRootController.m"
+
 
 

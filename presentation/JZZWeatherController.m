@@ -9,7 +9,7 @@
 #import "JZZWeatherController.h"
 #import <LBBlurredImage/UIImageView+LBBlurredImage.h>
 #import <MJRefresh/MJRefresh.h>
-#import "JZZManager.h"
+#import "JZZWeatherManager.h"
 #import "JZZLifeCellTableViewCell.h"
 #import "JZZForecastDetailController.h"
 #import <Masonry.h>
@@ -146,7 +146,7 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
     [button addTarget:self action:@selector(popController) forControlEvents:UIControlEventTouchUpInside];
     [self.headView addSubview:button];
     
-    [[RACObserve([JZZManager sharedManager], realTimeCondition)
+    [[RACObserve([JZZWeatherManager sharedManager], realTimeCondition)
      deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(JZZRealTimeCondition *newCondition) {
          if (! newCondition) {
@@ -163,7 +163,7 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
          dateLabel.text = [NSString stringWithFormat:@"%@ 星期%@", newDate, [newCondition.week stringValue]];
      }];
      
-    [[RACObserve([JZZManager sharedManager], lifeCondition)
+    [[RACObserve([JZZWeatherManager sharedManager], lifeCondition)
      deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(JZZLifeCondition *newCondition) {
          [self.tableView reloadData];
@@ -176,9 +176,9 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     
     if (_type == JZZWeatherTypeOldMan) {
-        [[JZZManager sharedManager] findOldManCurrentLocation];
+        [[JZZWeatherManager sharedManager] findOldManCurrentLocation];
     } else {
-        [[JZZManager sharedManager] findCurrentLocation];
+        [[JZZWeatherManager sharedManager] findCurrentLocation];
     }
 
 }
@@ -218,9 +218,9 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return [JZZManager sharedManager].lifeArray.count + 1;
+        return [JZZWeatherManager sharedManager].lifeArray.count + 1;
     }
-    return [JZZManager sharedManager].forecast.weather.count + 1;
+    return [JZZWeatherManager sharedManager].forecast.weather.count + 1;
 }
 
 
@@ -235,7 +235,7 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
 //            if (! isRegNib) {
 //                [self.tableView registerNib:[UINib nibWithNibName:@"JZZLifeCellTableViewCell" bundle:nil] forCellReuseIdentifier:LifeCellIdentifier];
 //            }
-            JZZLifeCondition *life = [JZZManager sharedManager].lifeCondition;
+            JZZLifeCondition *life = [JZZWeatherManager sharedManager].lifeCondition;
             cell = [self configureLifeCellAtIndexPath:indexPath life:life];
         }
     }
@@ -275,8 +275,8 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
     if (! lifeCell) {
         lifeCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:LifeCellIdentifier];
     }
-    NSArray *lifeArray = [JZZManager sharedManager].lifeArray;
-//    lifeCell.catagoryImgeView.image = [UIImage imageNamed:[JZZManager sharedManager].imageArray[indexPath.row - 1]];
+    NSArray *lifeArray = [JZZWeatherManager sharedManager].lifeArray;
+//    lifeCell.catagoryImgeView.image = [UIImage imageNamed:[JZZWeatherManager sharedManager].imageArray[indexPath.row - 1]];
     lifeCell.selectionStyle = UITableViewCellSelectionStyleNone;
     lifeCell.textLabel.text = self.titleArray[indexPath.row - 1];
     lifeCell.detailTextLabel.text = lifeArray[indexPath.row - 1][0];
@@ -299,7 +299,7 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
     
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
     cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18];
-    NSDictionary *forecastInfoDict = [JZZManager sharedManager].forecast.weather[indexPath.row - 1];
+    NSDictionary *forecastInfoDict = [JZZWeatherManager sharedManager].forecast.weather[indexPath.row - 1];
     if (indexPath.row == 1) {
         cell.textLabel.text = @"今天";
     }
@@ -332,7 +332,7 @@ static NSString *const LifeCellIdentifier = @"ZJZLifeCell";
         return;
     }
     JZZForecastDetailController *detailController = [[JZZForecastDetailController alloc] init];
-    NSDictionary *forecastInfoDict = [JZZManager sharedManager].forecast.weather[indexPath.row - 1];
+    NSDictionary *forecastInfoDict = [JZZWeatherManager sharedManager].forecast.weather[indexPath.row - 1];
     if (indexPath.row == 1) {
         detailController.title = @"今天";
     }

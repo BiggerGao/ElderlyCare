@@ -28,6 +28,7 @@
 
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     [self injected];
     self.view.backgroundColor = [UIColor whiteColor];
 }

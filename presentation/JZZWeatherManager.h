@@ -1,5 +1,5 @@
 //
-//  JZZManager.h
+//  JZZWeatherManager.h
 //  ZJZWeather
 //
 //  Created by Jzzhou on 16/5/11.
@@ -13,7 +13,7 @@
 #import "JZZLifeCondition.h"
 #import "JZZForecast.h"
 
-@interface JZZManager : NSObject
+@interface JZZWeatherManager : NSObject
 @property (nonatomic, strong, readonly) NSString *currentLocation;
 @property (nonatomic, strong, readonly) JZZRealTimeCondition *realTimeCondition;
 @property (nonatomic, strong, readonly) JZZLifeCondition *lifeCondition;

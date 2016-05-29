@@ -1,18 +1,18 @@
 //
-//  JZZManager.m
+//  JZZWeatherManager.m
 //  ZJZWeather
 //
 //  Created by Jzzhou on 16/5/11.
 //  Copyright © 2016年 Jzzhou. All rights reserved.
 //
 
-#import "JZZManager.h"
+#import "JZZWeatherManager.h"
 #import "JZZClient.h"
 
 #import <TSMessages/TSMessage.h>
 #import "GlobalVariablesManager.h"
 
-@interface JZZManager () <CLLocationManagerDelegate>
+@interface JZZWeatherManager () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong, readwrite) JZZRealTimeCondition *realTimeCondition;
 @property (nonatomic, strong, readwrite) JZZLifeCondition *lifeCondition;
@@ -27,11 +27,11 @@
 
 @end
 
-@implementation JZZManager
+@implementation JZZWeatherManager
 
 
 + (instancetype)sharedManager {
-    static JZZManager *_sharedManager = nil;
+    static JZZWeatherManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedManager = [[self alloc] init];

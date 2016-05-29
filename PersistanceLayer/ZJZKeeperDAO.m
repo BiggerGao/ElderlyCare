@@ -30,8 +30,7 @@ static ZJZKeeperDAO *sharedManager = nil;
 - (void)findKeeper:(ZJZKeeper *)inputKeeper
 {
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
-    MKNetworkOperation *operation = [[MKNetworkOperation alloc] init];
-    operation = [engine operationWithPath:@"selectKeeper"
+    MKNetworkOperation *operation = [engine operationWithPath:@"selectKeeper"
                                    params:@{@"tel":inputKeeper.tel, @"pwd":inputKeeper.password}
                                httpMethod:@"GET"
                                       ssl:NO];

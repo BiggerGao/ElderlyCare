@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F06BF401CF757AB00838DAB /* JZZDisease.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF3F1CF757AB00838DAB /* JZZDisease.m */; };
+		5F06BF431CF75D1000838DAB /* JZZFoodSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF421CF75D1000838DAB /* JZZFoodSupport.m */; };
+		5F06BF461CF75D8600838DAB /* JZZDrugSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF451CF75D8600838DAB /* JZZDrugSupport.m */; };
+		5F06BF491CF75E1000838DAB /* JZZSymptom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF481CF75E1000838DAB /* JZZSymptom.m */; };
+		5F06BF501CF7606B00838DAB /* JZZRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF4F1CF7606B00838DAB /* JZZRootController.m */; };
+		5F06BF591CF760AF00838DAB /* ZJZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF521CF760AF00838DAB /* ZJZFirstViewController.m */; };
+		5F06BF5A1CF760AF00838DAB /* ZJZSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF541CF760AF00838DAB /* ZJZSecondViewController.m */; };
+		5F06BF5B1CF760AF00838DAB /* ZJZThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF561CF760AF00838DAB /* ZJZThirdViewController.m */; };
+		5F06BF5C1CF760AF00838DAB /* ZJZForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF581CF760AF00838DAB /* ZJZForthViewController.m */; };
+		5F06BF8B1CF8811700838DAB /* YPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF861CF8811600838DAB /* YPTabBarController.m */; };
+		5F06BF8C1CF8811700838DAB /* YPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF881CF8811600838DAB /* YPTabBar.m */; };
+		5F06BF8D1CF8811700838DAB /* YPTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF8A1CF8811600838DAB /* YPTabItem.m */; };
+		5F06BF911CF8899A00838DAB /* JZZDiseaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF901CF8899A00838DAB /* JZZDiseaseManager.m */; };
+		5F06BF941CF88D6000838DAB /* JZZDiseaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF931CF88D6000838DAB /* JZZDiseaseClient.m */; };
+		5F06BF971CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF961CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.m */; };
+		5F06BF9E1CF96E9F00838DAB /* JZZTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F06BF9D1CF96E9F00838DAB /* JZZTemplateTableViewCell.m */; };
 		5F2393391CD625F7007466BA /* ZJZOldManProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2393381CD625F7007466BA /* ZJZOldManProfileViewController.m */; };
 		5F31CF641CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CF631CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m */; };
 		5F31CF6A1CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F31CF691CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m */; };
@@ -106,15 +122,48 @@
 		5FB72A371CE71E9D00A45F59 /* JZZLifeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB72A2B1CE71E9D00A45F59 /* JZZLifeCellTableViewCell.m */; };
 		5FB72A381CE71E9D00A45F59 /* JZZLifeCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB72A2C1CE71E9D00A45F59 /* JZZLifeCellTableViewCell.xib */; };
 		5FB72A391CE71E9D00A45F59 /* JZZLifeCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB72A2E1CE71E9D00A45F59 /* JZZLifeCondition.m */; };
-		5FB72A3A1CE71E9D00A45F59 /* JZZManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB72A301CE71E9D00A45F59 /* JZZManager.m */; };
+		5FB72A3A1CE71E9D00A45F59 /* JZZWeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB72A301CE71E9D00A45F59 /* JZZWeatherManager.m */; };
 		5FB72A3B1CE71E9D00A45F59 /* JZZRealTimeCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB72A321CE71E9D00A45F59 /* JZZRealTimeCondition.m */; };
 		5FB72A3D1CE71EEC00A45F59 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB72A3C1CE71EEC00A45F59 /* Default-568h@2x.png */; };
+		5FFCD88A1CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCD8891CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.m */; };
 		E227F1E62B4CFC0E9AFAD465 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEEFA7EFB1759367B894A28 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B77A30ACFCD85063F8D4CDE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		301EBC00A9A4FD69458414DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5F06BF3E1CF757AB00838DAB /* JZZDisease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZDisease.h; sourceTree = "<group>"; };
+		5F06BF3F1CF757AB00838DAB /* JZZDisease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZDisease.m; sourceTree = "<group>"; };
+		5F06BF411CF75D1000838DAB /* JZZFoodSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZFoodSupport.h; sourceTree = "<group>"; };
+		5F06BF421CF75D1000838DAB /* JZZFoodSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZFoodSupport.m; sourceTree = "<group>"; };
+		5F06BF441CF75D8500838DAB /* JZZDrugSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZDrugSupport.h; sourceTree = "<group>"; };
+		5F06BF451CF75D8600838DAB /* JZZDrugSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZDrugSupport.m; sourceTree = "<group>"; };
+		5F06BF471CF75E1000838DAB /* JZZSymptom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZSymptom.h; sourceTree = "<group>"; };
+		5F06BF481CF75E1000838DAB /* JZZSymptom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZSymptom.m; sourceTree = "<group>"; };
+		5F06BF4E1CF7606B00838DAB /* JZZRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZRootController.h; sourceTree = "<group>"; };
+		5F06BF4F1CF7606B00838DAB /* JZZRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZRootController.m; sourceTree = "<group>"; };
+		5F06BF511CF760AF00838DAB /* ZJZFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZFirstViewController.h; sourceTree = "<group>"; };
+		5F06BF521CF760AF00838DAB /* ZJZFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZFirstViewController.m; sourceTree = "<group>"; };
+		5F06BF531CF760AF00838DAB /* ZJZSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZSecondViewController.h; sourceTree = "<group>"; };
+		5F06BF541CF760AF00838DAB /* ZJZSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZSecondViewController.m; sourceTree = "<group>"; };
+		5F06BF551CF760AF00838DAB /* ZJZThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZThirdViewController.h; sourceTree = "<group>"; };
+		5F06BF561CF760AF00838DAB /* ZJZThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZThirdViewController.m; sourceTree = "<group>"; };
+		5F06BF571CF760AF00838DAB /* ZJZForthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZForthViewController.h; sourceTree = "<group>"; };
+		5F06BF581CF760AF00838DAB /* ZJZForthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZForthViewController.m; sourceTree = "<group>"; };
+		5F06BF851CF8811600838DAB /* YPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTabBarController.h; sourceTree = "<group>"; };
+		5F06BF861CF8811600838DAB /* YPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTabBarController.m; sourceTree = "<group>"; };
+		5F06BF871CF8811600838DAB /* YPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTabBar.h; sourceTree = "<group>"; };
+		5F06BF881CF8811600838DAB /* YPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTabBar.m; sourceTree = "<group>"; };
+		5F06BF891CF8811600838DAB /* YPTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTabItem.h; sourceTree = "<group>"; };
+		5F06BF8A1CF8811600838DAB /* YPTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTabItem.m; sourceTree = "<group>"; };
+		5F06BF8F1CF8899A00838DAB /* JZZDiseaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZDiseaseManager.h; sourceTree = "<group>"; };
+		5F06BF901CF8899A00838DAB /* JZZDiseaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZDiseaseManager.m; sourceTree = "<group>"; };
+		5F06BF921CF88D6000838DAB /* JZZDiseaseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZDiseaseClient.h; sourceTree = "<group>"; };
+		5F06BF931CF88D6000838DAB /* JZZDiseaseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZDiseaseClient.m; sourceTree = "<group>"; };
+		5F06BF951CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZTemplateTableViewDataEntity.h; sourceTree = "<group>"; };
+		5F06BF961CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZTemplateTableViewDataEntity.m; sourceTree = "<group>"; };
+		5F06BF9C1CF96E9F00838DAB /* JZZTemplateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZTemplateTableViewCell.h; sourceTree = "<group>"; };
+		5F06BF9D1CF96E9F00838DAB /* JZZTemplateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZTemplateTableViewCell.m; sourceTree = "<group>"; };
 		5F2393371CD625F7007466BA /* ZJZOldManProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManProfileViewController.h; sourceTree = "<group>"; };
 		5F2393381CD625F7007466BA /* ZJZOldManProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJZOldManProfileViewController.m; sourceTree = "<group>"; };
 		5F31CF621CF0B1C300336EAC /* ZJZOldManCityBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJZOldManCityBindingViewController.h; sourceTree = "<group>"; };
@@ -301,11 +350,13 @@
 		5FB72A2C1CE71E9D00A45F59 /* JZZLifeCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JZZLifeCellTableViewCell.xib; sourceTree = "<group>"; };
 		5FB72A2D1CE71E9D00A45F59 /* JZZLifeCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZLifeCondition.h; sourceTree = "<group>"; };
 		5FB72A2E1CE71E9D00A45F59 /* JZZLifeCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZLifeCondition.m; sourceTree = "<group>"; };
-		5FB72A2F1CE71E9D00A45F59 /* JZZManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZManager.h; sourceTree = "<group>"; };
-		5FB72A301CE71E9D00A45F59 /* JZZManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZManager.m; sourceTree = "<group>"; };
+		5FB72A2F1CE71E9D00A45F59 /* JZZWeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZWeatherManager.h; sourceTree = "<group>"; };
+		5FB72A301CE71E9D00A45F59 /* JZZWeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZWeatherManager.m; sourceTree = "<group>"; };
 		5FB72A311CE71E9D00A45F59 /* JZZRealTimeCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZRealTimeCondition.h; sourceTree = "<group>"; };
 		5FB72A321CE71E9D00A45F59 /* JZZRealTimeCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZRealTimeCondition.m; sourceTree = "<group>"; };
 		5FB72A3C1CE71EEC00A45F59 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5FFCD8881CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZTemplateTableViewDelegateObj.h; sourceTree = "<group>"; };
+		5FFCD8891CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZTemplateTableViewDelegateObj.m; sourceTree = "<group>"; };
 		6BEEFA7EFB1759367B894A28 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -329,6 +380,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F06BF3C1CF756F200838DAB /* 智能推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF8E1CF8891200838DAB /* ViewModel */,
+				5F06BF4A1CF7600800838DAB /* Mudule */,
+				5F06BF3D1CF7571A00838DAB /* Model */,
+			);
+			name = "智能推荐";
+			sourceTree = "<group>";
+		};
+		5F06BF3D1CF7571A00838DAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF3E1CF757AB00838DAB /* JZZDisease.h */,
+				5F06BF3F1CF757AB00838DAB /* JZZDisease.m */,
+				5F06BF471CF75E1000838DAB /* JZZSymptom.h */,
+				5F06BF481CF75E1000838DAB /* JZZSymptom.m */,
+				5F06BF411CF75D1000838DAB /* JZZFoodSupport.h */,
+				5F06BF421CF75D1000838DAB /* JZZFoodSupport.m */,
+				5F06BF441CF75D8500838DAB /* JZZDrugSupport.h */,
+				5F06BF451CF75D8600838DAB /* JZZDrugSupport.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5F06BF4A1CF7600800838DAB /* Mudule */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF4E1CF7606B00838DAB /* JZZRootController.h */,
+				5F06BF4F1CF7606B00838DAB /* JZZRootController.m */,
+				5F06BF951CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.h */,
+				5F06BF961CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.m */,
+				5F06BF9C1CF96E9F00838DAB /* JZZTemplateTableViewCell.h */,
+				5F06BF9D1CF96E9F00838DAB /* JZZTemplateTableViewCell.m */,
+				5FFCD8881CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.h */,
+				5FFCD8891CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.m */,
+				5F06BF981CF96DE500838DAB /* Disease */,
+				5F06BF991CF96DED00838DAB /* FoodSupport */,
+				5F06BF9A1CF96DFA00838DAB /* Sympton */,
+				5F06BF9B1CF96E0D00838DAB /* DrugSupport */,
+			);
+			name = Mudule;
+			sourceTree = "<group>";
+		};
+		5F06BF841CF8810900838DAB /* YPTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF851CF8811600838DAB /* YPTabBarController.h */,
+				5F06BF861CF8811600838DAB /* YPTabBarController.m */,
+				5F06BF871CF8811600838DAB /* YPTabBar.h */,
+				5F06BF881CF8811600838DAB /* YPTabBar.m */,
+				5F06BF891CF8811600838DAB /* YPTabItem.h */,
+				5F06BF8A1CF8811600838DAB /* YPTabItem.m */,
+			);
+			name = YPTabBarController;
+			sourceTree = "<group>";
+		};
+		5F06BF8E1CF8891200838DAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF8F1CF8899A00838DAB /* JZZDiseaseManager.h */,
+				5F06BF901CF8899A00838DAB /* JZZDiseaseManager.m */,
+				5F06BF921CF88D6000838DAB /* JZZDiseaseClient.h */,
+				5F06BF931CF88D6000838DAB /* JZZDiseaseClient.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		5F06BF981CF96DE500838DAB /* Disease */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF511CF760AF00838DAB /* ZJZFirstViewController.h */,
+				5F06BF521CF760AF00838DAB /* ZJZFirstViewController.m */,
+			);
+			name = Disease;
+			sourceTree = "<group>";
+		};
+		5F06BF991CF96DED00838DAB /* FoodSupport */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF531CF760AF00838DAB /* ZJZSecondViewController.h */,
+				5F06BF541CF760AF00838DAB /* ZJZSecondViewController.m */,
+			);
+			name = FoodSupport;
+			sourceTree = "<group>";
+		};
+		5F06BF9A1CF96DFA00838DAB /* Sympton */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF551CF760AF00838DAB /* ZJZThirdViewController.h */,
+				5F06BF561CF760AF00838DAB /* ZJZThirdViewController.m */,
+			);
+			name = Sympton;
+			sourceTree = "<group>";
+		};
+		5F06BF9B1CF96E0D00838DAB /* DrugSupport */ = {
+			isa = PBXGroup;
+			children = (
+				5F06BF571CF760AF00838DAB /* ZJZForthViewController.h */,
+				5F06BF581CF760AF00838DAB /* ZJZForthViewController.m */,
+			);
+			name = DrugSupport;
+			sourceTree = "<group>";
+		};
 		5F791B7A1CD24A000006F41B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,7 +533,7 @@
 				5FB72A3C1CE71EEC00A45F59 /* Default-568h@2x.png */,
 				5FAE74F01CB543E300853C31 /* ElderlyCare */,
 				5FAE75F11CB546C900853C31 /* PersistanceLayer */,
-				5FAE75FC1CB546C900853C31 /* presentation */,
+				5FAE75FC1CB546C900853C31 /* Presentation */,
 				5F791B7A1CD24A000006F41B /* Resource */,
 				5FAE75E61CB5466D00853C31 /* Vender */,
 				5FAE74EF1CB543E300853C31 /* Products */,
@@ -421,6 +576,7 @@
 		5FAE75E61CB5466D00853C31 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				5F06BF841CF8810900838DAB /* YPTabBarController */,
 				5FAE76D91CB549FC00853C31 /* CYCalendar */,
 				5FAE763E1CB546CA00853C31 /* MKNetworkKit */,
 				5FAE765D1CB546CA00853C31 /* ZFChart */,
@@ -438,7 +594,7 @@
 			path = PersistanceLayer;
 			sourceTree = "<group>";
 		};
-		5FAE75FC1CB546C900853C31 /* presentation */ = {
+		5FAE75FC1CB546C900853C31 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				5FAE76DC1CB54B7E00853C31 /* 时间表 */,
@@ -447,6 +603,7 @@
 				5FAE76DF1CB54B9400853C31 /* 我的收藏 */,
 				5FAE75FD1CB546C900853C31 /* Tool */,
 			);
+			name = Presentation;
 			path = presentation;
 			sourceTree = "<group>";
 		};
@@ -714,6 +871,7 @@
 			children = (
 				5FAE760E1CB546CA00853C31 /* ZJZDiscoveryViewController.h */,
 				5FAE760F1CB546CA00853C31 /* ZJZDiscoveryViewController.m */,
+				5F06BF3C1CF756F200838DAB /* 智能推荐 */,
 				5FB72A1E1CE71E6600A45F59 /* 老人天气预报 */,
 			);
 			name = "发现";
@@ -840,6 +998,8 @@
 		5FB72A201CE71E7800A45F59 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5FB72A241CE71E9D00A45F59 /* JZZWeatherController.h */,
+				5FB72A251CE71E9D00A45F59 /* JZZWeatherController.m */,
 				5FB72A2A1CE71E9D00A45F59 /* JZZLifeCellTableViewCell.h */,
 				5FB72A2B1CE71E9D00A45F59 /* JZZLifeCellTableViewCell.m */,
 				5FB72A2C1CE71E9D00A45F59 /* JZZLifeCellTableViewCell.xib */,
@@ -852,10 +1012,8 @@
 			children = (
 				5FB72A281CE71E9D00A45F59 /* JZZForecastDetailController.h */,
 				5FB72A291CE71E9D00A45F59 /* JZZForecastDetailController.m */,
-				5FB72A2F1CE71E9D00A45F59 /* JZZManager.h */,
-				5FB72A301CE71E9D00A45F59 /* JZZManager.m */,
-				5FB72A241CE71E9D00A45F59 /* JZZWeatherController.h */,
-				5FB72A251CE71E9D00A45F59 /* JZZWeatherController.m */,
+				5FB72A2F1CE71E9D00A45F59 /* JZZWeatherManager.h */,
+				5FB72A301CE71E9D00A45F59 /* JZZWeatherManager.m */,
 				5FB72A221CE71E9D00A45F59 /* JZZClient.h */,
 				5FB72A231CE71E9D00A45F59 /* JZZClient.m */,
 			);
@@ -1009,11 +1167,16 @@
 				5FAE76C21CB546CA00853C31 /* ZFLineChart.m in Sources */,
 				5FAE76B31CB546CA00853C31 /* NSMutableArray+convenience.m in Sources */,
 				5FAE76AC1CB546CA00853C31 /* NSDictionary+RequestEncoding.m in Sources */,
+				5F06BF401CF757AB00838DAB /* JZZDisease.m in Sources */,
 				5FAE76BB1CB546CA00853C31 /* ZFBar.m in Sources */,
 				5FAE768F1CB546CA00853C31 /* ZJZCenterSection.m in Sources */,
 				5FAE76C41CB546CA00853C31 /* ZFTranslucencePath.m in Sources */,
+				5F06BF8B1CF8811700838DAB /* YPTabBarController.m in Sources */,
+				5F06BF8C1CF8811700838DAB /* YPTabBar.m in Sources */,
+				5F06BF971CF96DBF00838DAB /* JZZTemplateTableViewDataEntity.m in Sources */,
 				5FAE77091CB5506B00853C31 /* TBXML.m in Sources */,
 				5FAE76B61CB546CA00853C31 /* VRGCalendarView.m in Sources */,
+				5F06BF911CF8899A00838DAB /* JZZDiseaseManager.m in Sources */,
 				5FB72A3B1CE71E9D00A45F59 /* JZZRealTimeCondition.m in Sources */,
 				5FAE768B1CB546CA00853C31 /* SJAvatarBrowser.m in Sources */,
 				5FAE76B71CB546CA00853C31 /* NSString+Zirkfied.m in Sources */,
@@ -1023,7 +1186,10 @@
 				5FAE769A1CB546CA00853C31 /* ZJZOldManDAO.m in Sources */,
 				5FAE74F61CB543E300853C31 /* AppDelegate.m in Sources */,
 				5FAE76FB1CB5505900853C31 /* ZJZKeeper.m in Sources */,
+				5F06BF9E1CF96E9F00838DAB /* JZZTemplateTableViewCell.m in Sources */,
+				5F06BF8D1CF8811700838DAB /* YPTabItem.m in Sources */,
 				5FAE76B11CB546CA00853C31 /* Reachability.m in Sources */,
+				5F06BF501CF7606B00838DAB /* JZZRootController.m in Sources */,
 				5FAE76981CB546CA00853C31 /* ZJZOldManCell.m in Sources */,
 				5FAE77071CB5506B00853C31 /* TBXML+Compression.m in Sources */,
 				5FAE76A31CB546CA00853C31 /* FMDatabase.m in Sources */,
@@ -1034,8 +1200,10 @@
 				5FAE76901CB546CA00853C31 /* ZJZCenterViewController.m in Sources */,
 				5FAE76AF1CB546CA00853C31 /* MKNetworkEngine.m in Sources */,
 				5FB72A391CE71E9D00A45F59 /* JZZLifeCondition.m in Sources */,
+				5F06BF431CF75D1000838DAB /* JZZFoodSupport.m in Sources */,
 				5FB72A331CE71E9D00A45F59 /* JZZClient.m in Sources */,
 				5FAE76A91CB546CA00853C31 /* LunarCalendar.m in Sources */,
+				5F06BF591CF760AF00838DAB /* ZJZFirstViewController.m in Sources */,
 				5FAE76B01CB546CA00853C31 /* MKNetworkOperation.m in Sources */,
 				5FAE76841CB546CA00853C31 /* ZJZChartTableViewController.m in Sources */,
 				5FAE76BD1CB546CA00853C31 /* ZFAxisLine.m in Sources */,
@@ -1043,15 +1211,18 @@
 				5FAE76FA1CB5505900853C31 /* ZJZHourInfo.m in Sources */,
 				5FAE76A61CB546CA00853C31 /* FMDatabaseQueue.m in Sources */,
 				5FAE76BA1CB546CA00853C31 /* ZFConst.m in Sources */,
+				5F06BF491CF75E1000838DAB /* JZZSymptom.m in Sources */,
 				5FAE76951CB546CA00853C31 /* ZJZKeeperViewController.m in Sources */,
 				5FAE76AB1CB546CA00853C31 /* NSDate+RFC1123.m in Sources */,
 				5FAE76B91CB546CA00853C31 /* UIView+Zirkfied.m in Sources */,
+				5F06BF461CF75D8600838DAB /* JZZDrugSupport.m in Sources */,
 				5FAE74F31CB543E300853C31 /* main.m in Sources */,
 				5FAE76BC1CB546CA00853C31 /* ZFBarChart.m in Sources */,
 				5F31CF641CF0B1C300336EAC /* ZJZOldManCityBindingViewController.m in Sources */,
+				5FFCD88A1CF9743800EE3885 /* JZZTemplateTableViewDelegateObj.m in Sources */,
 				5FB72A341CE71E9D00A45F59 /* JZZWeatherController.m in Sources */,
 				5FAE76BF1CB546CA00853C31 /* ZFLabel.m in Sources */,
-				5FB72A3A1CE71E9D00A45F59 /* JZZManager.m in Sources */,
+				5FB72A3A1CE71E9D00A45F59 /* JZZWeatherManager.m in Sources */,
 				5F2393391CD625F7007466BA /* ZJZOldManProfileViewController.m in Sources */,
 				5FAE76C11CB546CA00853C31 /* ZFLine.m in Sources */,
 				5FAE76B41CB546CA00853C31 /* UIColor+expanded.m in Sources */,
@@ -1067,6 +1238,7 @@
 				5FAE76941CB546CA00853C31 /* ZJZFavoriteViewController.m in Sources */,
 				5FAE76A01CB546CA00853C31 /* ZJZSettingPasswordViewController.m in Sources */,
 				5FAE76B21CB546CA00853C31 /* NSDate+convenience.m in Sources */,
+				5F06BF941CF88D6000838DAB /* JZZDiseaseClient.m in Sources */,
 				5FAE76AE1CB546CA00853C31 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				5FAE77081CB5506B00853C31 /* TBXML+HTTP.m in Sources */,
 				5FAE76F91CB5505900853C31 /* ZJZDailyInfo.m in Sources */,
@@ -1075,6 +1247,7 @@
 				5FAE76B81CB546CA00853C31 /* UIColor+Zirkfied.m in Sources */,
 				5FAE770A1CB5506B00853C31 /* ZJZXMLParser.m in Sources */,
 				5F31CF6D1CF161AE00336EAC /* ZJZChooseWeatherController.m in Sources */,
+				5F06BF5B1CF760AF00838DAB /* ZJZThirdViewController.m in Sources */,
 				5F31CF6A1CF0BB4200336EAC /* ZJZOldManFamilierBindingViewController.m in Sources */,
 				5FB72A361CE71E9D00A45F59 /* JZZForecastDetailController.m in Sources */,
 				5FAE769B1CB546CA00853C31 /* ZJZOldManListViewController.m in Sources */,
@@ -1083,6 +1256,8 @@
 				5FAE76A81CB546CA00853C31 /* CYDatetime.m in Sources */,
 				5FAE76A51CB546CA00853C31 /* FMDatabasePool.m in Sources */,
 				5FAE76AA1CB546CA00853C31 /* NSData+Base64.m in Sources */,
+				5F06BF5A1CF760AF00838DAB /* ZJZSecondViewController.m in Sources */,
+				5F06BF5C1CF760AF00838DAB /* ZJZForthViewController.m in Sources */,
 				5FAE768C1CB546CA00853C31 /* UIView+RGSize.m in Sources */,
 				5FAE76A11CB546CA00853C31 /* ZJZSettingPhotoViewController.m in Sources */,
 			);

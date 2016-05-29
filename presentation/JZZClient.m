@@ -71,7 +71,6 @@ static NSString *API = @"http://op.juhe.cn/onebox/weather/query?cityname=%@&dtyp
 
 - (RACSignal *)fetchCurrentConditionForLocation:(NSString *)city {
     NSString *urlString = [[NSString stringWithFormat:API, city] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
     NSURL *url = [NSURL URLWithString:urlString];
     
     return [[self fetchJSONFromURL:url] map:^id(NSDictionary* json) {

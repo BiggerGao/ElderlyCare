@@ -119,7 +119,7 @@
     }
     if (indexPath.section == 1) {
         GlobalVariablesManager *manager = [GlobalVariablesManager sharedManager];
-        manager.currOldMan = _oldMan;
+        [manager setCurrOldMan:self.oldMan];
         
         [self.delegate passPrimaryOldMan:_oldMan];
         

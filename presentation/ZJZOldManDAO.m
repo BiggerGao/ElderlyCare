@@ -26,9 +26,8 @@ static ZJZOldManDAO *sharedManager = nil;
 - (void)findOldManList:(ZJZKeeper *)keeper
 {
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
-    MKNetworkOperation *operation = [[MKNetworkOperation alloc] init];
     NSDictionary *params = @{@"keeperID":keeper.keeperID, @"oldName": @"all"};
-    operation = [engine operationWithPath:@"selectOldmanInfo" params:params httpMethod:@"GET" ssl:NO];
+    MKNetworkOperation *operation = [engine operationWithPath:@"selectOldmanInfo" params:params httpMethod:@"GET" ssl:NO];
     [operation onCompletion:^(MKNetworkOperation *completedOperation) {
         ZJZXMLParser *parser = [[ZJZXMLParser alloc] init];
         NSArray *resArr = [parser parseOldManInfo:[operation responseString]];
@@ -43,9 +42,8 @@ static ZJZOldManDAO *sharedManager = nil;
 - (void)findAllSportStatistic:(NSString *)deviceID
 {
     MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:HOST_NAME customHeaderFields:nil];
-    MKNetworkOperation *operation = [[MKNetworkOperation alloc] init];
     NSDictionary *param = @{@"deviceID":deviceID};
-    operation = [engine operationWithPath:@"selectAllSportStatistic" params:param httpMethod:@"GET" ssl:NO];
+    MKNetworkOperation *operation = [engine operationWithPath:@"selectAllSportStatistic" params:param httpMethod:@"GET" ssl:NO];
     [operation onCompletion:^(MKNetworkOperation *completedOperation) {
         ZJZXMLParser *parser = [[ZJZXMLParser alloc] init];
         NSArray *resArr = [parser parseChartType2String:[operation responseString]];
@@ -96,7 +94,7 @@ static ZJZOldManDAO *sharedManager = nil;
     [op onCompletion:^(MKNetworkOperation *completedOperation){
         // 保存XML文件
         NSString *content = [op responseString];
-        NSDictionary *dict = [[NSDictionary alloc] init];
+        NSDictionary *dict = nil;
         // 如果数据为空则不保存退出
         if (content.length < 190) {
             dict = [[NSDictionary alloc] initWithObjects:@[date, @[]] forKeys:@[@"date", @"listData"]];

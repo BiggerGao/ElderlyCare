@@ -236,7 +236,7 @@
     UILabel *illnessLabel1 = [self createLabelWithText:@"患病" textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
     illnessLabel1.textColor = [UIColor blackColor];
     [illnessView addSubview:illnessLabel1];
-    UILabel *illnessLabel2 = [self createLabelWithText:[self getIllnessStr:_oldMan.illness] textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
+    UILabel *illnessLabel2 = [self createLabelWithText:_oldMan.illness textAlignment:NSTextAlignmentLeft font:[UIFont systemFontOfSize:20]];
     illnessLabel2.textColor = ZJZColor(150, 150, 150, 1);
     [illnessView addSubview:illnessLabel2];
     
@@ -488,15 +488,15 @@
 }
 
 
-- (NSString*)getIllnessStr:(NSString *)illnessStr {
-    NSString* convert = nil;
-    if ([illnessStr isEqualToString:@"heart disease"]) {
-        convert = @"心脏疾病";
-    } else if ([illnessStr isEqualToString:@"heart attack"]) {
-        convert = @"心脏病";
-    }
-    return convert;
-}
+//- (NSString*)getIllnessStr:(NSString *)illnessStr {
+//    NSString* convert = nil;
+//    if ([illnessStr isEqualToString:@"heart disease"]) {
+//        convert = @"心脏疾病";
+//    } else if ([illnessStr isEqualToString:@"heart attack"]) {
+//        convert = @"心脏病";
+//    }
+//    return convert;
+//}
 
 - (NSDictionary*)calculateBMIWithHeight:(NSString*)heightStr weight:(NSString*)weightStr {
     float height = [heightStr floatValue];
